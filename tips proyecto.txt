@@ -1,0 +1,18 @@
+servidor de correo saliente, hayq que cambiar algo
+creador de pdf, no confundir con php mailer   (composer require mailer composer require dompdf)
+
+-- crear landing bootstrap
+-- crear comando propio resetear contrasñea administrador, crear administradores
+-- crear evento
+
+
+
+componentes de composer-
+correo
+form
+controller
+symfony mailer
+Crear servicios
+security
+doctrine make entity make controller make form
+templates
