@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicons/favicon.png">
+		<link rel="manifest" href="assets/img/favicons/manifest.json">
+		<meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+		<meta name="theme-color" content="#ffffff">
+		{% block stylesheets %}
+			<link rel="stylesheet" href="/assets/css/theme.css"/>
+		{% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <header>
-    <h1>HOLA A TODOS</h1>
-    </header>
+		{% block javascripts %}
+			 <script src="vendors/bootstrap/bootstrap.min.js"></script>
+		{% endblock %}
+	</head>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-warning" data-navbar-on-scroll="data-navbar-on-scroll">
+			<div class="container">
+				<a class="navbar-brand" href="{{path('index')}}"><img src="assets/img/logo.svg" height="31" alt="logo"/></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#feature">Product</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#validation">Customers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#superhero">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#marketing">Resources</a>
+						</li>
+					</ul>
+					<div class="d-flex ms-lg-4">
+					{% if app.user %}
+        				<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+            			{{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        				</li>
+						</ul>
+					{% else %}
+						<a class="btn btn-secondary-outline" href="{{path('app_login')}}">Login</a>
+						<a class="btn btn-warning ms-3" href="{{path('app_register')}}">Registro</a>
+					{% endif %}
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-    <footer>
-    </footer>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
+	<footer></footer>
 </html>
