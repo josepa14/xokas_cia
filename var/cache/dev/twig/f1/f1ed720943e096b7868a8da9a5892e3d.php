@@ -153,6 +153,6 @@ class __TwigTemplate_8f0d0e8ba5f497b9727ca4a128df4858 extends Template
         </span>
     </button>
 {% endif %}
-", "@EasyAdmin/crud/action.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\action.html.twig");
+", "@EasyAdmin/crud/action.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\action.html.twig");
     }
 }

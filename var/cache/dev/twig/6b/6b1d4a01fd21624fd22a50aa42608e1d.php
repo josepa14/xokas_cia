@@ -67,6 +67,6 @@ class __TwigTemplate_f1349fce6b38d13643830aa8ee388721 extends Template
 {# @var entity \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\EntityDto #}
 {# this template is used to display Doctrine entity primary keys #}
 {{ field.formattedValue }}
-", "@EasyAdmin/crud/field/id.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\id.html.twig");
+", "@EasyAdmin/crud/field/id.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\id.html.twig");
     }
 }

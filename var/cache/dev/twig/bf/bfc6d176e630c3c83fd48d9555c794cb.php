@@ -122,6 +122,6 @@ class __TwigTemplate_5947a5e64fe7c965a818ac874646fcf5 extends Template
 
     {{ include('juegos/_delete_form.html.twig') }}
 {% endblock %}
-", "juegos/edit.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\juegos\\edit.html.twig");
+", "juegos/edit.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\edit.html.twig");
     }
 }

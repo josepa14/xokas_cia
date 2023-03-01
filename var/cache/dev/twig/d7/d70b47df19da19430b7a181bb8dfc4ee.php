@@ -140,6 +140,6 @@ class __TwigTemplate_50e0ca9fcc5cb28edec69f6734283f05 extends Template
         <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\registration\\register.html.twig");
     }
 }

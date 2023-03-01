@@ -61,10 +61,14 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #2F281E;
-  background-color: #FFFEFE;
+  /* background-color: #2fc4f1; */
+  background-image:url("/assets/img/juegos/semi.png"); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+ 
 
 hr {
   margin: 1rem 0;
@@ -4513,7 +4517,7 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9480,7 +9484,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-  background-color: #979797 !important;
+  background-color: #000 !important;
 }
 
 .bg-body {

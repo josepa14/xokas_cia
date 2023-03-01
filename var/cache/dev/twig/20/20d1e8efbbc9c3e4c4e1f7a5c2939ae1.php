@@ -70,7 +70,8 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Juegos index</h1>
+        echo "<div class=\"container\">
+    <h1>Juegos index</h1>
 
     <table class=\"table\">
         <thead>
@@ -81,50 +82,55 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
                 <th>Alto</th>
                 <th>MinPlayers</th>
                 <th>MaxPlayers</th>
+                <th>descripcion</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 21
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["juegos"]) || array_key_exists("juegos", $context) ? $context["juegos"] : (function () { throw new RuntimeError('Variable "juegos" does not exist.', 21, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["juegos"]) || array_key_exists("juegos", $context) ? $context["juegos"] : (function () { throw new RuntimeError('Variable "juegos" does not exist.', 23, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["juego"]) {
-            // line 22
+            // line 24
             echo "            <tr>
                 <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "nombre", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "ancho", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "alto", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "nombre", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "minPlayers", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "ancho", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "maxPlayers", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "alto", [], "any", false, false, false, 28), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "minPlayers", [], "any", false, false, false, 29), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "maxPlayers", [], "any", false, false, false, 30), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["juego"], "descripcion", [], "any", false, false, false, 31), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_show", ["id" => twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 30)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_show", ["id" => twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["juego"], "id", [], "any", false, false, false, 34)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -132,7 +138,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 35
+            // line 38
             echo "            <tr>
                 <td colspan=\"7\">no records found</td>
             </tr>
@@ -141,14 +147,16 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['juego'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 42
         echo "        </tbody>
     </table>
-
     <a href=\"";
-        // line 42
+        // line 44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_new");
         echo "\">Create new</a>
+    </div>
+
+    
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -167,7 +175,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
 
     public function getDebugInfo()
     {
-        return array (  150 => 42,  145 => 39,  136 => 35,  127 => 31,  123 => 30,  118 => 28,  114 => 27,  110 => 26,  106 => 25,  102 => 24,  98 => 23,  95 => 22,  90 => 21,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  155 => 44,  151 => 42,  142 => 38,  133 => 34,  129 => 33,  124 => 31,  120 => 30,  116 => 29,  112 => 28,  108 => 27,  104 => 26,  100 => 25,  97 => 24,  92 => 23,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -177,6 +185,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
 {% block title %}Juegos index{% endblock %}
 
 {% block body %}
+<div class=\"container\">
     <h1>Juegos index</h1>
 
     <table class=\"table\">
@@ -188,6 +197,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
                 <th>Alto</th>
                 <th>MinPlayers</th>
                 <th>MaxPlayers</th>
+                <th>descripcion</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -200,6 +210,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
                 <td>{{ juego.alto }}</td>
                 <td>{{ juego.minPlayers }}</td>
                 <td>{{ juego.maxPlayers }}</td>
+                <td>{{ juego.descripcion }}</td>
                 <td>
                     <a href=\"{{ path('app_juegos_show', {'id': juego.id}) }}\">show</a>
                     <a href=\"{{ path('app_juegos_edit', {'id': juego.id}) }}\">edit</a>
@@ -212,9 +223,11 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
         {% endfor %}
         </tbody>
     </table>
-
     <a href=\"{{ path('app_juegos_new') }}\">Create new</a>
+    </div>
+
+    
 {% endblock %}
-", "juegos/index.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\juegos\\index.html.twig");
+", "juegos/index.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\index.html.twig");
     }
 }

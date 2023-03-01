@@ -78,6 +78,6 @@ class __TwigTemplate_f1b483a2d7c17cb3ae5ba8ba9ab802ca extends Template
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "juegos/_form.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\juegos\\_form.html.twig");
+", "juegos/_form.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\_form.html.twig");
     }
 }

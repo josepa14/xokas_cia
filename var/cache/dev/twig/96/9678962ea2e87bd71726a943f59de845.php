@@ -3267,6 +3267,6 @@ array_key_exists("prototype", $context)) ? (twig_get_attribute($this->env, $this
         </button>
     </div>
 {% endblock %}
-", "@EasyAdmin/crud/form_theme.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\form_theme.html.twig");
+", "@EasyAdmin/crud/form_theme.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\form_theme.html.twig");
     }
 }

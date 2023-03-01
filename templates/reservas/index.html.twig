@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+ <h1>aaaa</h1> 
+<button class="btn btn-primary" id="agregar">agregar</button>
+        <div class="container">
+       
+       
+            <div id="sala" class="sala">
+            </div>
+
+            <div class="almacen" id="almacen">
+            </div>
+
+        </div>
+        <div class="dialog" title="Crear nueva mesa">
+            <label>altura</label>
+            <input type="int" id="altura" name="altura">
+            <label>anchura</label>
+            <input type="int" id="anchura" name="anchura">
+            <button id="anadir" type="submit">Añadir</button>
+        </div>
+
+{% endblock %}

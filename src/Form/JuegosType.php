@@ -17,6 +17,8 @@ class JuegosType extends AbstractType
             ->add('alto')
             ->add('minPlayers')
             ->add('maxPlayers')
+            ->add('descripcion')
+            ->add('imagen')
         ;
     }
 

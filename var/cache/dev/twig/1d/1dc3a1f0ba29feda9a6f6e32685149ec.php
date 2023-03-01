@@ -958,6 +958,6 @@ $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBl
     {%- set force_error = true -%}
     {{- block('form_row') -}}
 {%- endblock datetime_row %}
-", "@EasyAdmin/symfony-form-themes/bootstrap_base_layout.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\symfony-form-themes\\bootstrap_base_layout.html.twig");
+", "@EasyAdmin/symfony-form-themes/bootstrap_base_layout.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\symfony-form-themes\\bootstrap_base_layout.html.twig");
     }
 }
