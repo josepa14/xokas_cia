@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2023 a las 00:20:53
+-- Tiempo de generación: 02-03-2023 a las 14:32:11
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -78,7 +78,7 @@ CREATE TABLE `juegos` (
 
 INSERT INTO `juegos` (`id`, `nombre`, `ancho`, `alto`, `min_players`, `max_players`, `descripcion`, `imagen`) VALUES
 (1, 'BANG', 170, 170, 3, 8, 'JUEGO DEL OESTE', 'bang.jpg'),
-(2, 'SEVEN WONDER', 120, 120, 3, 9, NULL, 'defecto.jpg'),
+(2, 'SEVEN WONDER', 120, 120, 3, 9, 'Juego de Conquista, utiliza tus recursos para ganar la partida', 'defecto.jpg'),
 (3, 'DOOBLE', 50, 50, 2, 5, NULL, 'defecto.jpg'),
 (4, 'POLILLA TRAMPOSA', 149, 30, 3, 7, NULL, 'defecto.jpg'),
 (5, 'SOLITARIO', 50, 70, 1, 1, NULL, 'defecto.jpg'),
@@ -92,8 +92,8 @@ INSERT INTO `juegos` (`id`, `nombre`, `ancho`, `alto`, `min_players`, `max_playe
 
 CREATE TABLE `mesas` (
   `id` int(11) NOT NULL,
-  `posx` int(11) DEFAULT NULL,
-  `posy` int(11) DEFAULT NULL,
+  `posx` float DEFAULT NULL,
+  `posy` float DEFAULT NULL,
   `alto` int(11) NOT NULL,
   `ancho` int(11) NOT NULL,
   `fecha_reservas` varchar(255) DEFAULT NULL
@@ -104,16 +104,11 @@ CREATE TABLE `mesas` (
 --
 
 INSERT INTO `mesas` (`id`, `posx`, `posy`, `alto`, `ancho`, `fecha_reservas`) VALUES
-(1, NULL, NULL, 50, 50, NULL),
-(2, 0, 0, 50, 50, NULL),
-(3, 40, 50, 60, 70, '2023-03-01'),
-(4, 0, 0, 55, 44, NULL),
-(5, 0, 0, 50, 50, NULL),
-(10, 0, 0, 34, 34, NULL),
-(11, 0, 0, 80, 60, NULL),
-(12, 0, 0, 45, 45, NULL),
-(18, 0, 0, 90, 90, NULL),
-(19, 212, 263, 90, 90, NULL);
+(1, 273.5, 51, 50, 50, '2023-03-02'),
+(21, 170.5, 411, 90, 90, '2023-03-02'),
+(22, NULL, NULL, 50, 50, '2023-03-02'),
+(23, NULL, NULL, 40, 40, '2023-03-02'),
+(24, NULL, NULL, 70, 70, '2023-03-02');
 
 -- --------------------------------------------------------
 
@@ -134,7 +129,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `username`, `roles`) VALUES
-(1, 'admin@admin.es', '$2y$13$lcKrv1224qwPKQgvX/L.zODDtq.9Tt9d.0gF8nCybunUMp5hQmSYi', '', '');
+(1, 'admin@admin.es', '$2y$13$lcKrv1224qwPKQgvX/L.zODDtq.9Tt9d.0gF8nCybunUMp5hQmSYi', '', '[]');
 
 --
 -- Índices para tablas volcadas
@@ -179,7 +174,7 @@ ALTER TABLE `juegos`
 -- AUTO_INCREMENT de la tabla `mesas`
 --
 ALTER TABLE `mesas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
