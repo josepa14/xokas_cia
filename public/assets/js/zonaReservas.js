@@ -3,25 +3,31 @@ $(function () {
   //porgramacion eficiente meter en variables sala y almacen y pasarselo 
   //a pinta para que no se tenga que buscar cada vez que se ejecuta al mismo tiempo que se pueden cambiar en la lineas de aqui
   var almacen = $("#almacen");
+  var sala = $("#sala");
   //ajax de la api
   pintarMesas();
 
 
-
+  var fecha = new Date().toJSON().slice(0, 10);
   //este codigo esta bien aqui
   almacen.droppable({
     drop: function (ev, ui) {
       let mesaAlmacen = ui.draggable;
-      mesaAlmacen.attr("style", "").css({"width":parseInt(mesa.width())+"px","height":parseInt(mesa.height())+"px"});
+      console.log(mesaAlmacen.attr("id"))
+      console.log(mesaAlmacen.height())
+      console.log(mesaAlmacen.width())
+      let alto = mesaAlmacen.height()
+      let ancho = mesaAlmacen.width()
+      mesaAlmacen.attr("style", "").css({"width":ancho+"px","height":alto+"px"});
       $(this).append(mesaAlmacen)
-      console.log()
+      actualizarMesa(mesaAlmacen.attr("id"),undefined,undefined,fecha)
     }
   })
 
 
   $('.dialog').hide();
 
-
+  
   $("#anadir").click(function () {
     //capturamos los valores de la altura y anchura de la mesa y de la fecha seleccionada
     altmesa = $("#altura").val();
@@ -29,10 +35,8 @@ $(function () {
     //mientras este en almacen se crea en 0 posy y posX
 
     //mientras no tenga el selector de fecha utilizo la fecha de hoy
-    let fecha = new Date().toJSON().slice(0, 10);
+    
     console.log(fecha);
-    console.log(altmesa);
-    console.log(anchmesa);
     data = {
       "posx": 0,
       "posy": 0,
@@ -53,7 +57,7 @@ $(function () {
 
 
     var mesa = new Mesa(altmesa, anchmesa) // cambiamos por los elementos que traemos
-    mesa.pinta();
+
     //cerramos el dialog
     $(".dialog").dialog("close");
 
@@ -66,7 +70,7 @@ $(function () {
   //control de movimiento
 
 
-  $(".sala").droppable({
+  sala.droppable({
     drop: function (ev, ui) {
 
       difX = $(this).offset().left
@@ -78,10 +82,10 @@ $(function () {
       var width = parseInt(mesa.width())
       var height = parseInt(mesa.height())
 
-
+      
 
       var pos1 = [left, +left + width, top, top + height]
-      m1 = new Mesa(left, top, left + width, top + height);
+      m1 = new Mesa(left, top, width, height);
       m1.posicion();
 
 
@@ -119,16 +123,23 @@ $(function () {
         })
 
         if (!choca) {
-          tr = JSON.stringify(mesa, null, 4);
-          console.log(tr)
+          //necesito capturar la id de la mesa en movimiento y sus coordenadas
           $(this).append(mesa)
           mesa.css({ position: "absolute", top: top - difY + "px", left: left - difX + "px" })
+          console.log(mesa.attr("id"))
+          console.log(left - difX)
+          console.log(top - difY)
+          console.log("no ha chocado")
+          actualizarMesa(mesa.attr("id"),left - difX,top - difY,fecha)
         }
 
 
       } else {
+        
         $(this).append(mesa)
+        console.log(mesa.attr("no ha chocado 2"))
         mesa.css({ position: "absolute", top: top - difY + "px", left: left - difX + "px" })
+        actualizarMesa(mesa.attr("id"),left - difX,top - difY,fecha)
       }
       //})
 
@@ -151,13 +162,31 @@ function pintarMesas() {
     $.ajax({
       type: "GET",
       url: "http://localhost:8000/mostrarmesas",
-      data: {},
+      data: {
+    
+      },
       success: function (data) {
 
         $.each(data, function (k, v) {
           var mesa = new Mesa(v.alto, v.ancho, v.posy, v.posx, v.fecha, v.id); // cambiamos por los elementos que traemos
           mesa.pinta();
         });
+      }
+    });
+}
+function actualizarMesa(id,posy,posx,fecha) {
+  console.log(id)
+  let idn= id.split("_")[1];
+  console.log(idn)
+  console.log("mesa actualizada")
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8000/editarmemsa",
+      data: {
+        "id":idn,
+        "posx": posx,
+        "posy": posy,
+        "fecha": fecha
       }
     });
 }

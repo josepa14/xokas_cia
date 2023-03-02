@@ -18,6 +18,7 @@ return [
         '/mesas' => [[['_route' => 'app_mesas', '_controller' => 'App\\Controller\\MesasController::index'], null, null, null, false, false, null]],
         '/nuevamesa' => [[['_route' => 'app_mesas_createmesas', '_controller' => 'App\\Controller\\MesasController::createMesas'], null, ['POST' => 0], null, false, false, null]],
         '/mostrarmesas' => [[['_route' => 'app_mesas_mostarmesas', '_controller' => 'App\\Controller\\MesasController::mostarMesas'], null, ['GET' => 0], null, false, false, null]],
+        '/editarmemsa' => [[['_route' => 'app_mesas_modificarmesa', '_controller' => 'App\\Controller\\MesasController::ModificarMesa'], null, ['POST' => 0], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/reservas' => [[['_route' => 'app_reservas', '_controller' => 'App\\Controller\\ReservasController::index'], null, null, null, false, false, null]],
     ],

@@ -1,6 +1,6 @@
 function Mesa(alto, ancho, posy, posx, fecha, id) {
-  this.posicionX = posx
   this.posicionY = posy
+  this.posicionX = posx
   this.ancho = ancho
   this.alto = alto
   this.fecha = fecha
@@ -10,10 +10,12 @@ function Mesa(alto, ancho, posy, posx, fecha, id) {
 Mesa.prototype.posicion = function () {
   console.log(this.posicionX)
   console.log(this.posicionY)
+  console.log(this.alto)
+  console.log(this.ancho)
+  console.log(this.id)
 }
 
 Mesa.prototype.pinta = function () {
-  // this.id = this.id+1
   var almesa = this.alto;
   var ancMesa = this.ancho;
 
@@ -21,7 +23,7 @@ Mesa.prototype.pinta = function () {
   //sala posicion abosluta alamacen relativo
   if ((this.posicionX != undefined && this.posicionY != undefined) && (this.posicionX != 0 && this.posicionY != 0)) {
 
-    div.addClass("mesa").appendTo('.sala').css({ "height": almesa, "width": ancMesa, "top": this.posicionX + "px", "left": this.posicionY + "px" }).attr({ "id": "mesa_" + this.id })
+    div.addClass("mesa").appendTo('.sala').css({ "height": almesa, "width": ancMesa, "top": this.posicionY + "px", "left": this.posicionX + "px",position:"absolute"}).attr({ "id": "mesa_" + this.id })
   } else {
     div.addClass("mesa").appendTo('.almacen').css({ "height": almesa, "width": ancMesa }).attr({ "id": "mesa_" + this.id })
   }

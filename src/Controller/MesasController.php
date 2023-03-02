@@ -6,7 +6,6 @@ use App\Entity\Mesas;
 
 use App\Repository\MesasRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use stdClass;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -49,7 +48,7 @@ class MesasController extends AbstractController
         //return new Response($ejemplo."  ".$request->get('fecha'));
     }
     #[Route('/mostrarmesas', methods: ['GET'])]
-    public function mostarMesas(MesasRepository $mesasRepository) // :Response
+    public function mostarMesas(MesasRepository $mesasRepository) :Response
 
     {
         $datos = $mesasRepository->findAll();
@@ -64,6 +63,21 @@ class MesasController extends AbstractController
             ];
         }
         return $this->json($data);
+
+    }
+    
+    #[Route('/editarmemsa', methods: ['POST'])]
+    public function ModificarMesa(Request $request,MesasRepository $mesasRepository,ManagerRegistry $doctrine)  :Response
+    {
+        $mesaAeditar=$mesasRepository->find($request->get('id'));
+        $mesaAeditar->setPosx($request->get('posy'));
+        $mesaAeditar->setPosy($request->get('posx'));
+        $mesaAeditar->setFechaReservas($request->get('fecha'));
+    
+        $entityManager = $doctrine->getManager();
+        $entityManager->persist($mesaAeditar);
+        $entityManager->flush();        
+        return new Response("MESA EDITADA");
 
     }
 }

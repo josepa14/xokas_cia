@@ -15,10 +15,10 @@ class Mesas
     private ?int $id = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $posx = null;
+    private ?float $posx = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $posy = null;
+    private ?float $posy = null;
 
     #[ORM\Column]
     private ?int $alto = null;
@@ -34,24 +34,24 @@ class Mesas
         return $this->id;
     }
 
-    public function getPosx(): ?int
+    public function getPosx(): ?float
     {
         return $this->posx;
     }
 
-    public function setPosx(?int $posx): self
+    public function setPosx(?float $posx): self
     {
         $this->posx = $posx;
 
         return $this;
     }
 
-    public function getPosy(): ?int
+    public function getPosy(): ?float
     {
         return $this->posy;
     }
 
-    public function setPosy(?int $posy): self
+    public function setPosy(?float $posy): self
     {
         $this->posy = $posy;
 

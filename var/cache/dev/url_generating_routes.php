@@ -17,6 +17,7 @@ return [
     'app_mesas' => [[], ['_controller' => 'App\\Controller\\MesasController::index'], [], [['text', '/mesas']], [], [], []],
     'app_mesas_createmesas' => [[], ['_controller' => 'App\\Controller\\MesasController::createMesas'], [], [['text', '/nuevamesa']], [], [], []],
     'app_mesas_mostarmesas' => [[], ['_controller' => 'App\\Controller\\MesasController::mostarMesas'], [], [['text', '/mostrarmesas']], [], [], []],
+    'app_mesas_modificarmesa' => [[], ['_controller' => 'App\\Controller\\MesasController::ModificarMesa'], [], [['text', '/editarmemsa']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_reservas' => [[], ['_controller' => 'App\\Controller\\ReservasController::index'], [], [['text', '/reservas']], [], [], []],
 ];

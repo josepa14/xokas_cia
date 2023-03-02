@@ -56,8 +56,11 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo " <h1>aaaa</h1> 
-<button class=\"btn btn-primary\" id=\"agregar\">agregar</button>
+        echo "<div class=\"container\">
+    <h1>Reservas</h1> 
+    <button class=\"btn btn-primary mb-4\" id=\"agregar\">agregar</button>
+ 
+</div>
         <div class=\"container\">
        
        
@@ -101,8 +104,11 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
- <h1>aaaa</h1> 
-<button class=\"btn btn-primary\" id=\"agregar\">agregar</button>
+<div class=\"container\">
+    <h1>Reservas</h1> 
+    <button class=\"btn btn-primary mb-4\" id=\"agregar\">agregar</button>
+ 
+</div>
         <div class=\"container\">
        
        
@@ -122,6 +128,6 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
         </div>
 
 {% endblock %}
-", "reservas/index.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\reservas\\index.html.twig");
+", "reservas/index.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\reservas\\index.html.twig");
     }
 }
