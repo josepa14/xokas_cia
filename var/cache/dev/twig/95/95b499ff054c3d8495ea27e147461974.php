@@ -58,6 +58,12 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
         // line 3
         echo "<div class=\"container\">
     <h1>Reservas</h1> 
+    <form>
+        <fieldset>
+            <label for=\"entrada\">Fecha de la reserva </label>
+            <input type=\"text\" id=\"entrada\" name=\"entrada\" />
+        </fieldset>
+    </form>
     <button class=\"btn btn-primary mb-4\" id=\"agregar\">agregar</button>
  
 </div>
@@ -106,6 +112,12 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
 {% block body %}
 <div class=\"container\">
     <h1>Reservas</h1> 
+    <form>
+        <fieldset>
+            <label for=\"entrada\">Fecha de la reserva </label>
+            <input type=\"text\" id=\"entrada\" name=\"entrada\" />
+        </fieldset>
+    </form>
     <button class=\"btn btn-primary mb-4\" id=\"agregar\">agregar</button>
  
 </div>
