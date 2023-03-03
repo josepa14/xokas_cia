@@ -57,7 +57,7 @@ class MesasRepository extends ServiceEntityRepository
 //    public function findOneBySomeField($value): ?Mesas
 //    {
 //        return $this->createQueryBuilder('m')
-//            ->andWhere('m.exampleField = :val')
+//            ->andWhere('m.exampleField = :val') //cambiar por m.fecha y val por fechas
 //            ->setParameter('val', $value)
 //            ->getQuery()
 //            ->getOneOrNullResult()

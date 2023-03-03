@@ -1,39 +1,93 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-{# PRESENTACION PARTE 1 SI NO ESTAS LOGEADO #}
-{% if not app.user %}
-<section class="pt-7">
-        <div class="container">
-          <div class="row align-items-center bg-white" style="border-radius: 1rem;">
-            <div class="col-md-6 text-md-start text-center py-6 p-7">
-              <h1 class="mb-4 fs-9 fw-bold">Xokas y cia proyect</h1>
-              <p class="mb-6 lead text-secondary">Diviertete con tus amigos jugando juegos de mesa, all<br class="d-none d-xl-block" />y participando en nuestros eventos, tan solo<br class="d-none d-xl-block" />registrate y empieza a disfrutar</p>
-              <div class="text-center text-md-start"><a class="btn btn-warning me-3 btn-lg p-3 text-white" href="{{path('app_register')}}" role="button">REGISTRO</a></div>
-            </div>
-            <div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid" src="assets/img/juegos/juegosindex.jpg" alt="" /></div>
-          </div>
-        </div>
-</section>
-{% endif %}
-  <div class="container">
-  <h1 class="fs-9 fw-bold mb-4 text-center"> Algunos juegos <br class="d-none d-xl-block">de nuestra coleccion</h1>
-  <div class="row">
-            
-            {% for juego in juegos %}
+	{# PRESENTACION PARTE 1 SI NO ESTAS LOGEADO #}
+	{% if not app.user %}
+		<section class="pt-7">
+			<div class="container">
+				<div class="row align-items-center bg-white" style="border-radius: 1rem;">
+					<div class="col-md-6 text-md-start text-center py-6 p-7">
+						<h1 class="mb-4 fs-9 fw-bold">Xokas y cia proyect</h1>
+						<p class="mb-6 lead text-secondary">Diviertete con tus amigos jugando juegos de mesa, all<br class="d-none d-xl-block"/>y participando en nuestros eventos, tan solo<br class="d-none d-xl-block"/>registrate y empieza a disfrutar</p>
+						<div class="text-center text-md-start">
+							<a class="btn btn-warning me-3 btn-lg p-3 text-white" href="{{path('app_register')}}" role="button">REGISTRO</a>
+						</div>
+					</div>
+					<div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid" src="assets/img/juegos/juegosindex.jpg" alt=""/></div>
+				</div>
+			</div>
+		</section>
+	{% endif %}
+	<div class="container">
+		<h1 class="fs-9 fw-bold mb-4 text-center">
+			Algunos juegos
+			<br class="d-none d-xl-block">de nuestra coleccion</h1>
+		<div class="row">
 
-            <div class="shadow-sm col-lg-3 col-sm-6 mb-2 text-center"> 
-              <img class="mb-3 ms-n3" src="/assets/img/juegos/{{juego.imagen}}" width="75" alt="Feature" />
-              <h4 class="mb-3">{{ juego.nombre }}</h4>
-              <p class="mb-0 fw-medium text-secondary">{{juego.descripcion}}</p>
-              <p class="mb-0 fw-medium text-secondary">Minimo de jugadores {{juego.minPlayers}}, maximo {{juego.maxPlayers}} </p>
-            </div>
-            
-          
-        
-        {% endfor %}
-        <div class="text-center mt-2 mb-5"><a class="btn btn-warning" href="{{path('app_juegos_index')}}" role="button">Todos nuestros Juegos</a></div>
-          </div>
-          
-  </div>
+			{% for juego in juegos %}
+
+				<div class="shadow-sm col-lg-3 col-sm-6 mb-2 text-center">
+					<img class="mb-3 ms-n3" src="/assets/img/juegos/{{juego.imagen}}" width="75" alt="Feature"/>
+					<h4 class="mb-3">{{ juego.nombre }}</h4>
+					<p class="mb-0 fw-medium text-secondary">{{juego.descripcion}}</p>
+					<p class="mb-0 fw-medium text-secondary">Minimo de jugadores
+						{{juego.minPlayers}}, maximo
+						{{juego.maxPlayers}}
+					</p>
+				</div>
+        {# ESTE ES EL INDEX DEL MODAL #}
+        <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="{{juego.imagen}}" alt="Monopoly"/>
+                        </div>
+                    </div>
+        {# ESTE ES EL MODAL QUE SE ABRE #}
+				<div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+					<div class="modal-dialog modal-xl" role="document">
+						<div class="modal-content">
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									<i class="fas fa-times"></i>
+								</span>
+							</button>
+							<div class="modal-body text-center">
+								<div class="container">
+									<div class="row justify-content-center">
+										<div
+											class="col-lg-8">
+											<!-- Portfolio Modal - Title-->
+											<h2 class="portfolio-modal-title text-secondary mb-0">Monopoly</h2>
+											<!-- Icon Divider-->
+											<div class="divider-custom">
+												<div class="divider-custom-line"></div>
+												<div class="divider-custom-icon">
+													<i class="fas fa-star"></i>
+												</div>
+												<div class="divider-custom-line"></div>
+											</div>
+											<!-- Portfolio Modal - Image-->
+											<img
+											class="img-fluid rounded mb-5" src="{{ asset('/img/monopoly.jpg') }}" alt="Monopoly"/>
+											<!-- Portfolio Modal - Text-->
+											<p class="mb-5"></p>
+											<button class="btn btn-primary" href="#" data-dismiss="modal">
+												<i class="fas fa-times fa-fw"></i>Close Window</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        {# ESTE ES EL FIN DEL MODAL #}
+
+			{% endfor %}
+			<div class="text-center mt-2 mb-5">
+				<a class="btn btn-warning" href="{{path('app_juegos_index')}}" role="button">Todos nuestros Juegos</a>
+			</div>
+		</div>
+
+	</div>
 {% endblock %}
