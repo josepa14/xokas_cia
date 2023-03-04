@@ -75,4 +75,20 @@ class JuegosController extends AbstractController
 
         return $this->redirectToRoute('app_juegos_index', [], Response::HTTP_SEE_OTHER);
     }
+    #[Route('/mostrarJuegos/{altura}/{anchura}', methods: ['GET'])]
+    public function mostrarReservas(JuegosRepository $jr, $altura,$anchura) :Response
+
+    {
+        $datos = $jr->findByExampleField($altura,$anchura);
+        if (empty($datos)){return new Response("[]");}
+        foreach ($datos as $dato) {
+            $data[] = [
+                'id' => $dato->getId(),
+                'nombre' => $dato->getNombre(),
+       
+            ];
+        }
+        return $this->json($data);
+
+    }
 }

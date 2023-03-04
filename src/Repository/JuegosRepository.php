@@ -42,17 +42,19 @@ class JuegosRepository extends ServiceEntityRepository
 //    /**
 //     * @return Juegos[] Returns an array of Juegos objects
 //     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('j')
-//            ->andWhere('j.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('j.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+   public function findByExampleField($alto,$ancho): array
+   {
+       return $this->createQueryBuilder('j')
+           ->andWhere('j.alto <= :val1')
+           ->andWhere('j.ancho <= :val2')
+           ->setParameter('val1', $alto)
+           ->setParameter('val2', $ancho)
+           ->orderBy('j.id', 'ASC')
+           ->setMaxResults(10)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 
 //    public function findOneBySomeField($value): ?Juegos
 //    {

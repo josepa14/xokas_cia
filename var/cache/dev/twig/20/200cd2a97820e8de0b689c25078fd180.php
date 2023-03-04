@@ -63,24 +63,24 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t";
         // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 25
+        // line 28
         echo "
 \t\t";
-        // line 26
+        // line 29
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 34
+        // line 42
         echo "\t</head>
 
 \t";
-        // line 37
+        // line 45
         echo "
 
-\t<body class=\"d-flex flex-column min-vh-150\">
+\t<body class=\"d-flex flex-column min-vh-100\">
 
 \t\t<nav class=\"bg-img-title navbar navbar-expand-lg navbar-light sticky-top bg-warning pt-3 pb-3\" data-navbar-on-scroll=\"data-navbar-on-scroll\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<a class=\"navbar-brand\" href=\"";
-        // line 43
+        // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"/assets/img/diseno/logo.png\" height=\"36\" alt=\"logo\"/></a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -100,51 +100,102 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"#marketing\">Resources</a>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
+
 \t\t\t\t\t\t";
-        // line 63
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", [], "any", false, false, false, 63)) {
-            // line 64
-            echo "\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
+        // line 70
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 70, $this->source); })()), "user", [], "any", false, false, false, 70)) {
+            // line 71
+            echo "\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tAcciones
+\t\t\t\t\t\t\t\t\t</a>
+
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+            // line 79
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservas");
+            echo "\">Reservar</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+            // line 82
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_misreservas", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 82, $this->source); })()), "user", [], "any", false, false, false, 82), "id", [], "any", false, false, false, 82)]), "html", null, true);
+            echo "\">Mis Reservas</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Mi perfil</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<hr class=\"dropdown-divider\">
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+            // line 91
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\"><b>Logout</b></a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
+\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
 \t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", [], "any", false, false, false, 66), "userIdentifier", [], "any", false, false, false, 66), "html", null, true);
+            // line 100
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 100, $this->source); })()), "user", [], "any", false, false, false, 100), "userIdentifier", [], "any", false, false, false, 100), "html", null, true);
             echo ",
-\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 67
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t";
+\t\t\t\t\t";
         } else {
-            // line 71
-            echo "\t\t\t\t\t\t\t<a class=\"btn btn-lg btn-outline-light\" href=\"";
+            // line 104
+            echo "\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
+\t\t\t\t\t\t\t<a class=\"btn btn-lg btn-outline-light\" href=\"";
+            // line 106
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Login</a>
 \t\t\t\t\t\t\t<a class=\"btn btn-lg btn-warning ms-3\" href=\"";
-            // line 72
+            // line 107
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Registro</a>
 \t\t\t\t\t\t";
         }
-        // line 74
+        // line 109
         echo "\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
+\t\t<div class=\"dropdown\">
+\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\">
+\t\t\t\tDropdown button
+\t\t\t</button>
+\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 1</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 2</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 3</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
 \t\t";
-        // line 79
+        // line 130
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 80
+        // line 131
         echo "
 \t\t";
-        // line 82
+        // line 133
         echo "
-\t\t<footer class=\"bg-dark text-center text-lg-start text-white mt-auto\">
+\t\t<footer
+\t\t\tclass=\"bg-dark text-center text-lg-start text-white mt-auto\">
 \t\t\t<!-- Grid container -->
 \t\t\t<div
 \t\t\t\tclass=\"container p-4\">
@@ -261,36 +312,49 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
         echo "\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.structure.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.theme.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
+\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery.toast.css\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/theme.css\"/>
-\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">
-\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/>
-\t\t";
+\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+
+\t\t\t";
+        // line 26
+        echo "\t\t\t";
+        // line 27
+        echo "\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/> ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 26
+    // line 29
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 27
+        // line 30
         echo "\t\t\t<script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/assets/js/jquery-ui.js\"></script>
-\t\t\t<script src=\"/vendors/bootstrap/bootstrap.min.js\"></script>
+\t\t\t";
+        // line 33
+        echo "\t\t\t";
+        // line 34
+        echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>
+\t\t\t<script src=\"/assets/js/jquery.toast.js\"></script>
+\t\t\t<script src=\"/assets/js/reservas.js\"></script>
 \t\t\t<script src=\"/assets/js/mesa.js\"></script>
 \t\t\t<script src=\"/assets/js/zonaReservas.js\"></script>
-
+\t\t\t";
+        // line 40
+        echo "
 \t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 79
+    // line 130
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -314,7 +378,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     public function getDebugInfo()
     {
-        return array (  294 => 79,  281 => 27,  274 => 26,  261 => 18,  254 => 17,  240 => 6,  146 => 82,  143 => 80,  140 => 79,  134 => 74,  129 => 72,  124 => 71,  117 => 67,  113 => 66,  109 => 64,  107 => 63,  84 => 43,  76 => 37,  72 => 34,  70 => 26,  67 => 25,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  358 => 130,  350 => 40,  343 => 34,  341 => 33,  337 => 30,  330 => 29,  323 => 27,  321 => 26,  312 => 18,  305 => 17,  291 => 6,  196 => 133,  193 => 131,  190 => 130,  168 => 109,  163 => 107,  159 => 106,  155 => 104,  148 => 100,  136 => 91,  124 => 82,  118 => 79,  108 => 71,  106 => 70,  84 => 51,  76 => 45,  72 => 42,  70 => 29,  67 => 28,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -339,17 +403,25 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.structure.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery-ui.theme.css\" type=\"text/css\" media=\"screen\" title=\"no title\" charset=\"utf-8\">
+\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery.toast.css\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/theme.css\"/>
-\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">
-\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/>
-\t\t{% endblock %}
+\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+
+\t\t\t{# <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\"> #}
+\t\t\t{# <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\"> #}
+\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/> {% endblock %}
 
 \t\t{% block javascripts %}
 \t\t\t<script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/assets/js/jquery-ui.js\"></script>
-\t\t\t<script src=\"/vendors/bootstrap/bootstrap.min.js\"></script>
+\t\t\t{# <script src=\"/vendors/bootstrap/bootstrap.min.js\"></script> #}
+\t\t\t{# <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\"></script> #}
+\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>
+\t\t\t<script src=\"/assets/js/jquery.toast.js\"></script>
+\t\t\t<script src=\"/assets/js/reservas.js\"></script>
 \t\t\t<script src=\"/assets/js/mesa.js\"></script>
 \t\t\t<script src=\"/assets/js/zonaReservas.js\"></script>
+\t\t\t{# <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script> #}
 
 \t\t{% endblock %}
 \t</head>
@@ -357,7 +429,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t{# de pruebas arriba #}
 
 
-\t<body class=\"d-flex flex-column min-vh-150\">
+\t<body class=\"d-flex flex-column min-vh-100\">
 
 \t\t<nav class=\"bg-img-title navbar navbar-expand-lg navbar-light sticky-top bg-warning pt-3 pb-3\" data-navbar-on-scroll=\"data-navbar-on-scroll\">
 \t\t\t<div class=\"container\">
@@ -379,16 +451,43 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"#marketing\">Resources</a>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
+
 \t\t\t\t\t\t{% if app.user %}
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tAcciones
+\t\t\t\t\t\t\t\t\t</a>
+
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('app_reservas') }}\">Reservar</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('app_misreservas', {'id':app.user.id}) }}\">Mis Reservas</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Mi perfil</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<hr class=\"dropdown-divider\">
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('app_logout') }}\"><b>Logout</b></a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
 \t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
 \t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t{{ app.user.userIdentifier }},
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_logout') }}\">Logout</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t{% else %}
+\t\t\t\t\t{% else %}
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
 \t\t\t\t\t\t\t<a class=\"btn btn-lg btn-outline-light\" href=\"{{path('app_login')}}\">Login</a>
 \t\t\t\t\t\t\t<a class=\"btn btn-lg btn-warning ms-3\" href=\"{{path('app_register')}}\">Registro</a>
 \t\t\t\t\t\t{% endif %}
@@ -396,12 +495,29 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
+\t\t<div class=\"dropdown\">
+\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\">
+\t\t\t\tDropdown button
+\t\t\t</button>
+\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 1</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 2</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 3</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
 \t\t{#FIN  BARRA NAVEGACION ------------------------------------------------------------------------------------------------------------------------------------------ #}
 \t\t{% block body %}{% endblock %}
 
 \t\t{# FOOTER ------------------------------------------------------------------------------------------------------------------------------------------ #}
 
-\t\t<footer class=\"bg-dark text-center text-lg-start text-white mt-auto\">
+\t\t<footer
+\t\t\tclass=\"bg-dark text-center text-lg-start text-white mt-auto\">
 \t\t\t<!-- Grid container -->
 \t\t\t<div
 \t\t\t\tclass=\"container p-4\">

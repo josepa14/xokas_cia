@@ -30,10 +30,8 @@ class MesasController extends AbstractController
         $mesas->setPosy($request->get('posy'));
         $mesas->setAlto($request->get('alto'));
         $mesas->setAncho($request->get('ancho'));
-
-        $fecha = $request->get('fecha');
-        $date = strtotime($fecha);
-        $fechafinal = date('d-M-Y', $date);
+        $mesas->setFechaReservas($request->get('fecha'));
+     
 
 
         // $mesas->setFechaReservas($fechafinal); // me da fallo de mesas
@@ -44,14 +42,15 @@ class MesasController extends AbstractController
         // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
 
-        return new Response('Saved new mesas with id ' . $mesas->getId() . ' y de fecha ha llegado ' . $fecha);
+        return new Response('Saved new mesas with id ' . $mesas->getId());
         //return new Response($ejemplo."  ".$request->get('fecha'));
     }
-    #[Route('/mostrarmesas', methods: ['GET'])]
-    public function mostarMesas(MesasRepository $mesasRepository) :Response
+    #[Route('/mostrarmesas/{fecha}', methods: ['GET'])]
+    public function mostarMesas(MesasRepository $mesasRepository, $fecha) :Response
 
     {
-        $datos = $mesasRepository->findAll();
+        $datos = $mesasRepository->findByExampleField($fecha);
+        if (empty($datos)){return new Response("[]");}
         foreach ($datos as $dato) {
             $data[] = [
                 'id' => $dato->getId(),
@@ -59,7 +58,7 @@ class MesasController extends AbstractController
                 'posy' => $dato->getPosy(),
                 'alto' => $dato->getAlto(),
                 'ancho' => $dato->getAncho(),
-                'fecha_reserva' => $dato->getFechaReservas()
+                'fecha' => $dato->getFechaReservas()
             ];
         }
         return $this->json($data);

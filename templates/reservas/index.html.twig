@@ -1,32 +1,59 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="container">
-    <h1>Reservas</h1> 
-    <form>
-        <fieldset>
-            <label for="entrada">Fecha de la reserva </label>
-            <input type="text" id="entrada" name="entrada" />
-        </fieldset>
-    </form>
-    <button class="btn btn-primary mb-4" id="agregar">agregar</button>
- 
-</div>
-        <div class="container">
-       
-       
-            <div id="sala" class="sala">
-            </div>
+<script>
+    const filters = JSON.parse('{{ app.user.roles | json_encode | raw }}');
+</script>
+	<div class="container">
+		<h1>Reservas</h1>
 
-            <div class="almacen" id="almacen">
-            </div>
+		<form>
+			<fieldset>
+				<label for="entrada">Fecha de la reserva
+				</label>
+				<input type="text" id="entrada" name="entrada"/>
+			</fieldset>
+			<fieldset id="horario" style="display:none">
+				<label for="horas">Hora:</label>
+				<select name="horas" id="horas">
+					<option value="" selected="selected">Seleccione una hora</option>
+					<option value="10h">10:00H</option>
+					<option value="11h">11:00H</option>
+					<option value="12h">12:00H</option>
+					<option value="13h">13:00H</option>
+					<option value="16h">16:00H</option>
+					<option value="17h">17:00H</option>
+					<option value="18h">18:00H</option>
+				</select>
+			</fieldset>
+		</form>
+		
+		{% if "ROLE_ADMIN" in app.user.roles %}
+		<button class="btn btn-primary mb-4" id="agregar">agregar</button>
+		<div class="dialog" title="Crear nueva mesa" id="crearMesa">
+			<label>altura</label>
+			<input type="int" id="altura" name="altura">
+			<label>anchura</label>
+			<input type="int" id="anchura" name="anchura">
+			<button id="anadir" type="submit">Añadir</button>
+		
+	{% endif %}
+	</div>
+	<div class="container">
 
-        </div>
-        <div class="dialog" title="Crear nueva mesa">
-            <label>altura</label>
-            <input type="int" id="altura" name="altura">
-            <label>anchura</label>
-            <input type="int" id="anchura" name="anchura">
-            <button id="anadir" type="submit">Añadir</button>
-        </div>
+
+		<div id="sala" class="sala"></div>
+
+		<div class="almacen" id="almacen"></div>
+
+	</div>
+	</div>
+		<div class="dialog" title="Crear nueva Reserva" id="crearReserva">
+		<label for="idJuego">Juego disponibles para la mesa</label>
+		<select id="idJuego" name="idJuego"></select>
+		<button id="reservar" type="submit">Reservar Mesa</button>
+		<input type="int" id="idUser" style="display:none" disabled value="{{app.user.id}}">
+	</div>
+
+	
 
 {% endblock %}

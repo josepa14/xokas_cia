@@ -1,42 +1,50 @@
 $(function () {
   var almacen = $("#almacen");
   var sala = $("#sala");
+  var horario = $("#horario");
+  var horas = $("#horas");
+  var fecha;
+  var tramo;
+  $('.dialog').hide();
 
   //FECHAAAA
-   var diasfestivos = ["27/02/2023", "28/02/2023", "01/03/2023"];
    $.datepicker.setDefaults()
+
    $('#entrada').datepicker({
-    dateFormat: "dd/mm/yy",
+    dateFormat: "dd-mm-yy",
     minDate: "+1D",
     maxDate: "+3M +1D",
     firstDay: 1,
-    onSelect: function (text, obj) {
-      //   var desde = new Date(obj.currentYear, obj.currentMonth, obj.currentDay + 1);
-      //llamo a la api con los valores establecidos en fecha
-      pintarMesas();
+    onSelect: function (fechaSelect, obj) {
+      console.log(filters)
+      fecha = fechaSelect;
+      horas.prop('selectedIndex',0)
+      horario.attr({"style":""}) 
+    }
+    })
+    horas.change(function(){
+    tramo = $(this).val()
+      pintarMesas(fecha,tramo);
+    })
+
+
+  almacen.droppable({
+    drop: function (ev, ui) {
+
+      let mesaAlmacen;
+      //filtros
+      
+      mesaAlmacen= ui.draggable;
+      
+      let alto = mesaAlmacen.height()
+      let ancho = mesaAlmacen.width()
+      mesaAlmacen.attr("style", "").css({ "width": ancho + "px", "height": alto + "px" }).removeAttr("ondblclick");
+      $(this).append(mesaAlmacen)
+      actualizarMesa(mesaAlmacen.attr("id"), undefined, undefined, fecha)
     }
   })
 
-//FECHAAAAA
 
-
-
-var fecha = new Date().toJSON().slice(0, 10);
-
-almacen.droppable({
-  drop: function (ev, ui) {
-    let mesaAlmacen = ui.draggable;
-    console.log(mesaAlmacen.attr("id"))
-    console.log(mesaAlmacen.height())
-    console.log(mesaAlmacen.width())
-    let alto = mesaAlmacen.height()
-    let ancho = mesaAlmacen.width()
-    mesaAlmacen.attr("style", "").css({ "width": ancho + "px", "height": alto + "px" });
-    $(this).append(mesaAlmacen)
-    actualizarMesa(mesaAlmacen.attr("id"), undefined, undefined, fecha)
-  }
-})
-$('.dialog').hide();
 
 
 $("#anadir").click(function () {
@@ -44,8 +52,6 @@ $("#anadir").click(function () {
   altmesa = $("#altura").val();
   anchmesa = $("#anchura").val();
   //mientras este en almacen se crea en 0 posy y posX
-
-  //mientras no tenga el selector de fecha utilizo la fecha de hoy
 
   console.log(fecha);
   data = {
@@ -61,17 +67,18 @@ $("#anadir").click(function () {
     data: data,
     dataType: "JSON"
   })
-  pintarMesas();
+  pintarMesas(fecha,tramo);
 
   //cerramos el dialog
-  $(".dialog").dialog("close");
+  $("#crearMesa").dialog("close");
 
 });
 
 $('#agregar').click(function () {
-  $(".dialog").dialog({ autoOpen: true });
+  $("#crearMesa").dialog({ autoOpen: true });
 }
 )
+
 //control de movimiento
 
 
@@ -80,22 +87,18 @@ sala.droppable({
 
     difX = $(this).offset().left
     difY = $(this).offset().top
-
-    var mesa = ui.draggable;
+    var mesa;
+    if(filters.includes("ROLE_ADMIN"))
+      mesa = ui.draggable;
     var left = parseInt(ui.offset.left);
     var top = parseInt(ui.offset.top)
     var width = parseInt(mesa.width())
     var height = parseInt(mesa.height())
-
-
+  
 
     var pos1 = [left, +left + width, top, top + height]
     m1 = new Mesa(left, top, width, height);
-    m1.posicion();
-
     var mesaYa = $(".sala .mesa");
-    console.log(mesaYa)
-
 
     if (mesaYa.length > 0) {
       var choca = false;
@@ -132,7 +135,7 @@ sala.droppable({
     } else {
 
       $(this).append(mesa)
-      console.log(mesa.attr("no ha chocado 2"))
+
       mesa.css({ position: "absolute", top: top - difY + "px", left: left - difX + "px" })
       actualizarMesa(mesa.attr("id"), left - difX, top - difY, fecha)
     }
@@ -145,29 +148,51 @@ sala.droppable({
 
 //FUNCIONES LLAMANDO A LA API
 
-function pintarMesas() {
+function pintarMesas(fecha,hora) {
   $("#almacen").html("");
   $("#sala").html("");
+
+  //TRAIGO LAS MESAS CON LA FECHA
   $.ajax({
     type: "GET",
-    url: "http://localhost:8000/mostrarmesas",
-    data: {
-
-    },
+    crossDomain: true,
+    url: "http://localhost:8000/mostrarmesas/"+fecha,
     success: function (data) {
 
       $.each(data, function (k, v) {
-        var mesa = new Mesa(v.alto, v.ancho, v.posy, v.posx, v.fecha, v.id); // cambiamos por los elementos que traemos
-        mesa.pinta();
+        var mesa = new Mesa(v.alto, v.ancho, v.posy, v.posx, v.fecha, v.id);
+      
+         //aqui va mesa pinta
+         
+        
+        //traemos reservas de la v.fecha --> 1 reserva dia 5 a las 11 mesa 2
+        $.ajax({
+          type: "GET",
+          crossDomain: true,
+          url: "http://localhost:8000/mostrarreservas/"+fecha+"/"+hora,
+          success: function (reservas) {
+            $.each(reservas, function (k, v) {
+              var reserva = new Reserva(v.fecha,v.hora,v.idMesa,v.idJuego,v.idJugador,v.id)            
+              if(mesa.id = reserva.idMesa){
+              $("#mesa_"+mesa.id).css({"box-shadow":'0px 0px 3px 7px yellow'}).attr({"reservada":"si"})
+             
+              }
+            })
+          }
+        })
+        mesa.pinta(hora);
       });
     }
   });
+  //TRAIGO RESERVAS Y COMPRUEBO CUALES ESTAN PILLADAS
+  
+  
 }
 function actualizarMesa(id, posy, posx, fecha) {
-  console.log(id)
+  // console.log(id)
   let idn = id.split("_")[1];
-  console.log(idn)
-  console.log("mesa actualizada")
+  // console.log(idn)
+  // console.log("mesa actualizada")
   $.ajax({
     type: "POST",
     url: "http://localhost:8000/editarmemsa",
@@ -180,4 +205,7 @@ function actualizarMesa(id, posy, posx, fecha) {
   });
 }
 
-//ELEMENTOS DE LA FECHA
+   // $(this).css({'box-shadow':'10px 10px 5px #888'})
+  
+
+

@@ -307,6 +307,6 @@ class __TwigTemplate_1a00b1a3ee435bff0853cca438ba9fdb extends Template
 
 \t</div>
 {% endblock %}
-", "index.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\index.html.twig");
+", "index.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\index.html.twig");
     }
 }
