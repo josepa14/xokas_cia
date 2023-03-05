@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Reservas;
 use App\Repository\ReservasRepository;
+use App\Repository\UserRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -75,4 +76,19 @@ class ReservasController extends AbstractController
         return $this->json($data);
 
     }
+    // #[Route('/a/{a}', methods: ['GET'])]
+    // public function mostraru(UserRepository $reservasRepository, $a) :Response
+
+    // {
+    //     $datos = $reservasRepository->findByExampleField($a);
+    //     if (empty($datos)){return new Response("[]");}
+    //     foreach ($datos as $dato) {
+    //         $data[] = [
+    //             'id' => $dato->getId(),
+    //             'email' => $dato->getEmail()
+    //         ];
+    //     }
+    //     return $this->json($data);
+
+    // }
 }

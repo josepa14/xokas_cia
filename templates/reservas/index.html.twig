@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<script>
-    const filters = JSON.parse('{{ app.user.roles | json_encode | raw }}');
-</script>
+
+		<script>
+			const filters = filters = JSON.parse('{{ app.user.roles | json_encode | raw }}');
+		</script>
+	
 	<div class="container">
 		<h1>Reservas</h1>
 
@@ -26,34 +28,33 @@
 				</select>
 			</fieldset>
 		</form>
-		
+
 		{% if "ROLE_ADMIN" in app.user.roles %}
-		<button class="btn btn-primary mb-4" id="agregar">agregar</button>
-		<div class="dialog" title="Crear nueva mesa" id="crearMesa">
-			<label>altura</label>
-			<input type="int" id="altura" name="altura">
-			<label>anchura</label>
-			<input type="int" id="anchura" name="anchura">
-			<button id="anadir" type="submit">Añadir</button>
-		
-	{% endif %}
+			<button class="btn btn-primary mb-4" id="agregar">agregar</button>
+			<div class="dialog" title="Crear nueva mesa" id="crearMesa">
+				<label>altura</label>
+				<input type="int" id="altura" name="altura">
+				<label>anchura</label>
+				<input type="int" id="anchura" name="anchura">
+				<button id="anadir" type="submit">Añadir</button>
+
+			{% endif %}
+		</div>
+		<div class="container">
+
+
+			<div id="sala" class="sala"></div>
+
+			<div class="almacen" id="almacen"></div>
+
+		</div>
 	</div>
-	<div class="container">
-
-
-		<div id="sala" class="sala"></div>
-
-		<div class="almacen" id="almacen"></div>
-
-	</div>
-	</div>
-		<div class="dialog" title="Crear nueva Reserva" id="crearReserva">
+	<div class="dialog" title="Crear nueva Reserva" id="crearReserva">
 		<label for="idJuego">Juego disponibles para la mesa</label>
 		<select id="idJuego" name="idJuego"></select>
 		<button id="reservar" type="submit">Reservar Mesa</button>
 		<input type="int" id="idUser" style="display:none" disabled value="{{app.user.id}}">
 	</div>
 
-	
 
 {% endblock %}

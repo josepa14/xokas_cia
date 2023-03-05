@@ -8,8 +8,8 @@
     {% endif %}
 
     {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        <div class="container mt-1 h5">
+            Ya te encuentras logeado como {{ app.user.userIdentifier }}, desconectate <a href="{{ path('app_logout') }}"><b>AQUI</b></a>
         </div>
     {% endif %}
     {% if not app.user %}

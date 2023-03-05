@@ -169,30 +169,14 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
-\t\t<div class=\"dropdown\">
-\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\">
-\t\t\t\tDropdown button
-\t\t\t</button>
-\t\t\t<ul class=\"dropdown-menu\">
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 1</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 2</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 3</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
 \t\t";
-        // line 130
+        // line 114
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 131
+        // line 115
         echo "
 \t\t";
-        // line 133
+        // line 117
         echo "
 \t\t<footer
 \t\t\tclass=\"bg-dark text-center text-lg-start text-white mt-auto\">
@@ -354,7 +338,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     }
 
-    // line 130
+    // line 114
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -378,7 +362,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     public function getDebugInfo()
     {
-        return array (  358 => 130,  350 => 40,  343 => 34,  341 => 33,  337 => 30,  330 => 29,  323 => 27,  321 => 26,  312 => 18,  305 => 17,  291 => 6,  196 => 133,  193 => 131,  190 => 130,  168 => 109,  163 => 107,  159 => 106,  155 => 104,  148 => 100,  136 => 91,  124 => 82,  118 => 79,  108 => 71,  106 => 70,  84 => 51,  76 => 45,  72 => 42,  70 => 29,  67 => 28,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  342 => 114,  334 => 40,  327 => 34,  325 => 33,  321 => 30,  314 => 29,  307 => 27,  305 => 26,  296 => 18,  289 => 17,  275 => 6,  180 => 117,  177 => 115,  174 => 114,  168 => 109,  163 => 107,  159 => 106,  155 => 104,  148 => 100,  136 => 91,  124 => 82,  118 => 79,  108 => 71,  106 => 70,  84 => 51,  76 => 45,  72 => 42,  70 => 29,  67 => 28,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -495,22 +479,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
-\t\t<div class=\"dropdown\">
-\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\">
-\t\t\t\tDropdown button
-\t\t\t</button>
-\t\t\t<ul class=\"dropdown-menu\">
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 1</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 2</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Link 3</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
 \t\t{#FIN  BARRA NAVEGACION ------------------------------------------------------------------------------------------------------------------------------------------ #}
 \t\t{% block body %}{% endblock %}
 

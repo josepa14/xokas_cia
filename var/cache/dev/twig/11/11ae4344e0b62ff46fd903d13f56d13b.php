@@ -84,13 +84,13 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
         // line 10
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10)) {
             // line 11
-            echo "        <div class=\"mb-3\">
-            You are logged in as ";
+            echo "        <div class=\"container mt-1 h5\">
+            Ya te encuentras logeado como ";
             // line 12
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12), "userIdentifier", [], "any", false, false, false, 12), "html", null, true);
-            echo ", <a href=\"";
+            echo ", desconectate <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
+            echo "\"><b>AQUI</b></a>
         </div>
     ";
         }
@@ -199,8 +199,8 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
     {% endif %}
 
     {% if app.user %}
-        <div class=\"mb-3\">
-            You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+        <div class=\"container mt-1 h5\">
+            Ya te encuentras logeado como {{ app.user.userIdentifier }}, desconectate <a href=\"{{ path('app_logout') }}\"><b>AQUI</b></a>
         </div>
     {% endif %}
     {% if not app.user %}

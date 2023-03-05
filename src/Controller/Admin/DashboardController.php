@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Juegos;
+use App\Entity\Mesas;
+use App\Entity\Reservas;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -15,8 +17,11 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-
-        return $this->render('admin/index.html.twig');
+        
+        if (in_array("ROLE_ADMIN",$this->getUser()->getRoles())) {
+            return $this->render('admin/index.html.twig');
+            }         
+            return $this->redirect('/');
 
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
@@ -47,5 +52,8 @@ class DashboardController extends AbstractDashboardController
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linkToCrud('Crud Juegos', 'fas fa-list', Juegos::class);
         yield MenuItem::linkToCrud('Crud Usuarios', 'fas fa-list', User::class);
+        yield MenuItem::linkToCrud('Crud Reservas', 'fas fa-list', Reservas::class);
+        yield MenuItem::linkToCrud('Crud Mesas', 'fas fa-list', Mesas::class);
     }
+
 }

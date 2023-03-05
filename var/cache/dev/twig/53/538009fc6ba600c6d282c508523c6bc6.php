@@ -115,6 +115,6 @@ class __TwigTemplate_9d0c1d60dc4eb3c7af6205e40834c209 extends Template
 
     <a href=\"{{ path('app_juegos_index') }}\">back to list</a>
 {% endblock %}
-", "juegos/new.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\juegos\\new.html.twig");
+", "juegos/new.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\new.html.twig");
     }
 }
