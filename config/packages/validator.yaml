@@ -11,3 +11,11 @@ when@test:
     framework:
         validation:
             not_compromised_password: false
+# App\Entity\User:
+#         properties:
+#             email:
+#                 - NotBlank: ~
+#             password:
+#                 - NotBlank: ~
+#             username:
+#                 - NotBlank: ~

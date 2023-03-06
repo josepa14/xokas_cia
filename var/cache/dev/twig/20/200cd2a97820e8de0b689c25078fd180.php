@@ -571,6 +571,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t</body>
 
 </html>
-", "base.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\base.html.twig");
     }
 }

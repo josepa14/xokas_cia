@@ -15,10 +15,10 @@ class ServicioPersonalUser
     private $mailer;
     private $p;
     private $repo;
-    public function __construct(ManagerRegistry $user,UserPasswordHasherInterface $p,UserRepository $repo) //MailerInterface $mailer
+    public function __construct(ManagerRegistry $user,UserPasswordHasherInterface $p,UserRepository $repo,MailerInterface $mailer) //MailerInterface $mailer
     {
         $this->user = $user;
-        //$this->mailer = $mailer;
+        $this->mailer = $mailer;
         $this->p = $p;
         $this->repo = $repo;
     }
@@ -36,13 +36,13 @@ class ServicioPersonalUser
         // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
         
-    //     $email = (new Email())
-    //     ->from('jcasper2112@g.educaand.es')
-    //     ->to("cp.josepablo@gmail.com")
-    //     ->subject('PasswordRestablecida')
-    //     ->text('Se ha cambiado la contraseña de: '.$pass);
+        $emailer = (new Email())
+        ->from('jcasper2112@g.educaand.es')
+        ->to("cp.josepablo@gmail.com")
+        ->subject('PasswordRestablecida')
+        ->text('Se ha cambiado la contraseña de: '.$email);
 
-    // $this->mailer->send($email);
+        $this->mailer->send($emailer);
     }
 }
 

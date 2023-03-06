@@ -270,6 +270,6 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
 {% endif %}
 
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\security\\login.html.twig");
     }
 }

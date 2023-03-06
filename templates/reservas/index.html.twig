@@ -1,10 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-
 		<script>
-			const filters = filters = JSON.parse('{{ app.user.roles | json_encode | raw }}');
-		</script>
-	
+			const filters = JSON.parse('{{ app.user.roles | json_encode | raw }}');
+		</script>	
 	<div class="container">
 		<h1>Reservas</h1>
 
