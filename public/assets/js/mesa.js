@@ -48,10 +48,10 @@ Mesa.prototype.pinta = function (hora) {
         $("#crearReserva").dialog({ autoOpen: true });
         //cargo juegos para la mesa con ancmesa y altmesa
         $("#reservar").click(function(){
-        crearReserva(fechita,hora,identificador,$("#idJuego").val(),$("#idUser").val())
+          crearReserva(fechita,hora,identificador,$("#idJuego").val(),$("#idUser").val())
         $('#'+baneo).css({"box-shadow":'0px 0px 3px 7px yellow'}).attr({"reservada":"si"})
         $("#crearReserva").dialog("close")
-
+        $("#crearReserva").off("click")
         })
       }
     });
