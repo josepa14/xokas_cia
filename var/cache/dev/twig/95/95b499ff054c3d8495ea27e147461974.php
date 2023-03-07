@@ -105,9 +105,9 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
 \t\t<div class=\"container\">
 
 
-\t\t\t<div id=\"sala\" class=\"sala\"></div>
+\t\t\t<div id=\"sala\" class=\"c-sala\"></div>
 
-\t\t\t<div class=\"almacen\" id=\"almacen\"></div>
+\t\t\t<div class=\"c-almacen\" id=\"almacen\"></div>
 
 \t\t</div>
 \t</div>
@@ -188,9 +188,9 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
 \t\t<div class=\"container\">
 
 
-\t\t\t<div id=\"sala\" class=\"sala\"></div>
+\t\t\t<div id=\"sala\" class=\"c-sala\"></div>
 
-\t\t\t<div class=\"almacen\" id=\"almacen\"></div>
+\t\t\t<div class=\"c-almacen\" id=\"almacen\"></div>
 
 \t\t</div>
 \t</div>
@@ -203,6 +203,6 @@ class __TwigTemplate_ab6743053966832d503906130521dd63 extends Template
 
 
 {% endblock %}
-", "reservas/index.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\reservas\\index.html.twig");
+", "reservas/index.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\reservas\\index.html.twig");
     }
 }

@@ -70,76 +70,100 @@ class __TwigTemplate_ab8857d9f91a568e2ad74d4088ce04af extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Juegos</h1>
+        echo "<div class=\"container mt-3 mb-2 g--fondo-semi rounded shadow\">
+    <h1>Acerca del juego</h1>
 
     <table class=\"table\">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
-        echo "</td>
-            </tr>
+            
             <tr>
                 <th>Nombre</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 16, $this->source); })()), "nombre", [], "any", false, false, false, 16), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 14, $this->source); })()), "nombre", [], "any", false, false, false, 14), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Ancho</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 20, $this->source); })()), "ancho", [], "any", false, false, false, 20), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 18, $this->source); })()), "ancho", [], "any", false, false, false, 18), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Alto</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 24, $this->source); })()), "alto", [], "any", false, false, false, 24), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 22, $this->source); })()), "alto", [], "any", false, false, false, 22), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>MinPlayers</th>
                 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 28, $this->source); })()), "minPlayers", [], "any", false, false, false, 28), "html", null, true);
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 26, $this->source); })()), "minPlayers", [], "any", false, false, false, 26), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>MaxPlayersa</th>
                 <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 32, $this->source); })()), "maxPlayers", [], "any", false, false, false, 32), "html", null, true);
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 30, $this->source); })()), "maxPlayers", [], "any", false, false, false, 30), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>descripcion</th>
                 <td>";
-        // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 36, $this->source); })()), "descripcion", [], "any", false, false, false, 36), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 34, $this->source); })()), "descripcion", [], "any", false, false, false, 34), "html", null, true);
         echo "</td>
+            </tr>
+            <tr>
+                <th>Imagen</th>
+                <td> <img src=\"/assets/img/juegos/";
+        // line 38
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 38, $this->source); })()), "imagen", [], "any", false, false, false, 38), "html", null, true);
+        echo "\" class=\"img-thumbnail rounded w-25 g--transicion\" </td>
             </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 41
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_index");
-        echo "\">back to list</a>
-
-    <a href=\"";
         // line 43
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 43, $this->source); })()), "id", [], "any", false, false, false, 43)]), "html", null, true);
-        echo "\">edit</a>
-
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_index");
+        echo "\" class=\"btn btn-warning m-1 text-white\">Volver al Directorio</a>
     ";
-        // line 45
-        echo twig_include($this->env, $context, "juegos/_delete_form.html.twig");
-        echo "
+        // line 44
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44)) {
+            // line 45
+            echo "        ";
+            if (twig_in_filter("ROLE_ADMIN", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45), "roles", [], "any", false, false, false, 45))) {
+                // line 46
+                echo "    <a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 46, $this->source); })()), "id", [], "any", false, false, false, 46)]), "html", null, true);
+                echo "\" class=\"btn btn-info m-1 text-white\">EDITAR</a>
+        ";
+            }
+            // line 48
+            echo "    ";
+        }
+        // line 49
+        echo "    ";
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49)) {
+            // line 50
+            echo "        ";
+            if (twig_in_filter("ROLE_ADMIN", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "user", [], "any", false, false, false, 50), "roles", [], "any", false, false, false, 50))) {
+                // line 51
+                echo "    ";
+                echo twig_include($this->env, $context, "juegos/_delete_form.html.twig");
+                echo "
+     ";
+            }
+            // line 53
+            echo "    ";
+        }
+        // line 54
+        echo "    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -158,7 +182,7 @@ class __TwigTemplate_ab8857d9f91a568e2ad74d4088ce04af extends Template
 
     public function getDebugInfo()
     {
-        return array (  141 => 45,  136 => 43,  131 => 41,  123 => 36,  116 => 32,  109 => 28,  102 => 24,  95 => 20,  88 => 16,  81 => 12,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  166 => 54,  163 => 53,  157 => 51,  154 => 50,  151 => 49,  148 => 48,  142 => 46,  139 => 45,  137 => 44,  133 => 43,  125 => 38,  118 => 34,  111 => 30,  104 => 26,  97 => 22,  90 => 18,  83 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -168,14 +192,12 @@ class __TwigTemplate_ab8857d9f91a568e2ad74d4088ce04af extends Template
 {% block title %}Juegos{% endblock %}
 
 {% block body %}
-    <h1>Juegos</h1>
+<div class=\"container mt-3 mb-2 g--fondo-semi rounded shadow\">
+    <h1>Acerca del juego</h1>
 
     <table class=\"table\">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ juego.id }}</td>
-            </tr>
+            
             <tr>
                 <th>Nombre</th>
                 <td>{{ juego.nombre }}</td>
@@ -200,14 +222,25 @@ class __TwigTemplate_ab8857d9f91a568e2ad74d4088ce04af extends Template
                 <th>descripcion</th>
                 <td>{{ juego.descripcion }}</td>
             </tr>
+            <tr>
+                <th>Imagen</th>
+                <td> <img src=\"/assets/img/juegos/{{ juego.imagen }}\" class=\"img-thumbnail rounded w-25 g--transicion\" </td>
+            </tr>
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_juegos_index') }}\">back to list</a>
-
-    <a href=\"{{ path('app_juegos_edit', {'id': juego.id}) }}\">edit</a>
-
+    <a href=\"{{ path('app_juegos_index') }}\" class=\"btn btn-warning m-1 text-white\">Volver al Directorio</a>
+    {% if app.user %}
+        {% if \"ROLE_ADMIN\" in app.user.roles %}
+    <a href=\"{{ path('app_juegos_edit', {'id': juego.id})}}\" class=\"btn btn-info m-1 text-white\">EDITAR</a>
+        {% endif %}
+    {% endif %}
+    {% if app.user %}
+        {% if \"ROLE_ADMIN\" in app.user.roles %}
     {{ include('juegos/_delete_form.html.twig') }}
+     {% endif %}
+    {% endif %}
+    </div>
 {% endblock %}
 ", "juegos/show.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\show.html.twig");
     }

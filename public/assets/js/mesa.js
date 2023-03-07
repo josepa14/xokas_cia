@@ -24,7 +24,7 @@ Mesa.prototype.pinta = function (hora) {
   //sala posicion abosluta alamacen relativo
   if ((this.posicionX != undefined && this.posicionY != undefined) && (this.posicionX != 0 && this.posicionY != 0)) {
 
-    div.addClass("mesa").appendTo('.sala').css({
+    div.addClass("c-mesa").appendTo('.c-sala').css({
       "height": almesa,
       "width": ancMesa,
       "top": this.posicionY + "px",
@@ -49,14 +49,14 @@ Mesa.prototype.pinta = function (hora) {
         //cargo juegos para la mesa con ancmesa y altmesa
         $("#reservar").click(function(){
           crearReserva(fechita,hora,identificador,$("#idJuego").val(),$("#idUser").val())
-        $('#'+baneo).css({"box-shadow":'0px 0px 3px 7px yellow'}).attr({"reservada":"si"})
+        $('#'+baneo).css({"box-shadow":'0px 0px 3px 7px red'}).attr({"reservada":"si"})
         $("#crearReserva").dialog("close")
         $("#crearReserva").off("click")
         })
       }
     });
   } else {
-    div.addClass("mesa").appendTo('.almacen').css({ "height": almesa, "width": ancMesa }).attr({ "id": "mesa_" + this.id })
+    div.addClass("c-mesa").appendTo('.c-almacen').css({ "height": almesa, "width": ancMesa }).attr({ "id": "mesa_" + this.id })
   }
   if(filters.includes("ROLE_ADMIN")){
   div.draggable(

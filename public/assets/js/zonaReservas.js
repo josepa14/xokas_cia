@@ -174,7 +174,7 @@ function pintarMesas(fecha,hora) {
             $.each(reservas, function (k, v) {
               var reserva = new Reserva(v.fecha,v.hora,v.idMesa,v.idJuego,v.idJugador,v.id)            
               if(mesa.id = reserva.idMesa){
-              $("#mesa_"+mesa.id).css({"box-shadow":'0px 0px 3px 7px yellow'}).attr({"reservada":"si"})
+              $("#mesa_"+mesa.id).css({"box-shadow":'0px 0px 3px 7px red'}).attr({"reservada":"si"})
              
               }
             })

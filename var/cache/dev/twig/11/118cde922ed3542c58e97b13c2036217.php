@@ -39,12 +39,12 @@ class __TwigTemplate_8b00c14be775bffabc27b072a900db42 extends Template
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Seguro que quieres eliminar el juego?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["juego"]) || array_key_exists("juego", $context) ? $context["juego"] : (function () { throw new RuntimeError('Variable "juego" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger m-1\">Eliminar</button>
 </form>
 ";
         
@@ -69,9 +69,9 @@ class __TwigTemplate_8b00c14be775bffabc27b072a900db42 extends Template
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_juegos_delete', {'id': juego.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('app_juegos_delete', {'id': juego.id}) }}\" onsubmit=\"return confirm('Seguro que quieres eliminar el juego?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ juego.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-danger m-1\">Eliminar</button>
 </form>
 ", "juegos/_delete_form.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\_delete_form.html.twig");
     }

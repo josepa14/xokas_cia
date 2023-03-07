@@ -3,9 +3,7 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    
 
     {% if app.user %}
         <div class="container mt-1 h5">
@@ -45,6 +43,9 @@
                     <label class="form-label" for="password" >Contraseña</label>
                   </div>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                {% if error %}
+                  <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
                   <div class="pt-1 mb-4">
                     <button class="btn btn-warning btn-lg btn-block" type="submit">Login</button>
                   </div>

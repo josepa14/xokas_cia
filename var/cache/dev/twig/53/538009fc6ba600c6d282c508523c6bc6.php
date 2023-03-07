@@ -70,17 +70,22 @@ class __TwigTemplate_9d0c1d60dc4eb3c7af6205e40834c209 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Juegos</h1>
-
-    ";
-        // line 8
+        echo "    <div class=\"container\">
+        <div class=\"row a\" >
+            <h1>Agregar nuevo Juego</h1>
+        <div class=\"col-10 col-sm-6\">
+            ";
+        // line 10
         echo twig_include($this->env, $context, "juegos/_form.html.twig");
         echo "
-
-    <a href=\"";
-        // line 10
+            <a class=\"btn btn-warning m-3\" href=\"";
+        // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_index");
-        echo "\">back to list</a>
+        echo "\">Volver a la lista</a>
+        </div>
+        
+    </div>
+    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -99,7 +104,7 @@ class __TwigTemplate_9d0c1d60dc4eb3c7af6205e40834c209 extends Template
 
     public function getDebugInfo()
     {
-        return array (  82 => 10,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  83 => 11,  79 => 10,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -109,11 +114,16 @@ class __TwigTemplate_9d0c1d60dc4eb3c7af6205e40834c209 extends Template
 {% block title %}New Juegos{% endblock %}
 
 {% block body %}
-    <h1>Create new Juegos</h1>
-
-    {{ include('juegos/_form.html.twig') }}
-
-    <a href=\"{{ path('app_juegos_index') }}\">back to list</a>
+    <div class=\"container\">
+        <div class=\"row a\" >
+            <h1>Agregar nuevo Juego</h1>
+        <div class=\"col-10 col-sm-6\">
+            {{ include('juegos/_form.html.twig') }}
+            <a class=\"btn btn-warning m-3\" href=\"{{ path('app_juegos_index') }}\">Volver a la lista</a>
+        </div>
+        
+    </div>
+    </div>
 {% endblock %}
 ", "juegos/new.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\new.html.twig");
     }

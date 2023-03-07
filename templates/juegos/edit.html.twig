@@ -1,13 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Juegos{% endblock %}
+{% block title %}Edit Juegos
+{% endblock %}
 
 {% block body %}
-    <h1>Edit Juegos</h1>
-
-    {{ include('juegos/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_juegos_index') }}">back to list</a>
-
-    {{ include('juegos/_delete_form.html.twig') }}
+	<div class="container mb-4">
+			<div class="row a">
+				<h1>Agregar nuevo Juego</h1>
+				<div class="col-10 col-sm-6">
+					{{ include('juegos/_form.html.twig', {'button_label': 'Actualizar'}) }}
+					{{ include('juegos/_delete_form.html.twig') }}
+                    <a class="btn btn-warning" href="{{ path('app_juegos_index') }}">Volver a la lista</a>
+				</div>
+				
+			</div>
+	</div>
 {% endblock %}

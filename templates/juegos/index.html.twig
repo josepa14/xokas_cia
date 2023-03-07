@@ -3,20 +3,17 @@
 {% block title %}Juegos index{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Juegos index</h1>
+<h1 class="container mt-3">Directorio de Juegos</h1>
+<div class="container mt-3 p-2 rounder g--fondo-semi shadow">
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>Ancho</th>
-                <th>Alto</th>
-                <th>MinPlayers</th>
-                <th>MaxPlayers</th>
+                
                 <th>descripcion</th>
-                <th>actions</th>
+                <th>Accion</th>
             </tr>
         </thead>
         <tbody>
@@ -24,14 +21,15 @@
             <tr>
                 <td>{{ juego.id }}</td>
                 <td>{{ juego.nombre }}</td>
-                <td>{{ juego.ancho }}</td>
-                <td>{{ juego.alto }}</td>
-                <td>{{ juego.minPlayers }}</td>
-                <td>{{ juego.maxPlayers }}</td>
+
                 <td>{{ juego.descripcion }}</td>
                 <td>
-                    <a href="{{ path('app_juegos_show', {'id': juego.id}) }}">show</a>
-                    <a href="{{ path('app_juegos_edit', {'id': juego.id}) }}">edit</a>
+                    <a class="btn btn-warning text-white"  href="{{ path('app_juegos_show', {'id': juego.id}) }}"> Ver</a>
+                    {% if app.user %}
+                    {% if "ROLE_ADMIN" in app.user.roles %}   
+                    <a class="btn btn-info text-white" href="{{ path('app_juegos_edit', {'id': juego.id}) }}">editar</a>
+                    {% endif %}
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -41,7 +39,11 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('app_juegos_new') }}">Create new</a>
+    {% if app.user %}
+        {% if "ROLE_ADMIN" in app.user.roles %}
+    <a class="btn btn-warning" href="{{ path('app_juegos_new') }}">Crear nuevo juego</a>
+    {% endif %}
+    {% endif %}
     </div>
 
     
