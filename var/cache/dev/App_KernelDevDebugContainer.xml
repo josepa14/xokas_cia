@@ -5949,6 +5949,13 @@
         <argument key="siu" type="service_closure" id="App\Service\ServicioInvitacionUsuarios"/>
       </argument>
     </service>
+    <service id=".service_locator.219vIKa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="eventosR" type="service_closure" id="App\Repository\EventosRepository"/>
+        <argument key="siu" type="service_closure" id="App\Service\ServicioInvitacionUsuarios"/>
+      </argument>
+    </service>
     <service id=".service_locator.xVV8u.q" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5964,7 +5971,7 @@
         <argument key="reservasRepository" type="service_closure" id="App\Repository\ReservasRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.1zrgW89" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.VudxRBy" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\DashboardController::configureUserMenu" type="service_closure" id=".service_locator.t7nLwyX"/>
@@ -6108,7 +6115,7 @@
         <argument key="App\Controller\ParticipacionController::AceptarInvitacion" type="service_closure" id=".service_locator.giM7w9x"/>
         <argument key="App\Controller\ParticipacionController::index" type="service_closure" id=".service_locator.yRlwRBf"/>
         <argument key="App\Controller\ParticipacionController::invitacion" type="service_closure" id=".service_locator.giM7w9x"/>
-        <argument key="App\Controller\ParticipacionController::verEventos" type="service_closure" id=".service_locator.giM7w9x"/>
+        <argument key="App\Controller\ParticipacionController::verEventos" type="service_closure" id=".service_locator.219vIKa"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.xVV8u.q"/>
         <argument key="App\Controller\ReservasController::createReservas" type="service_closure" id=".service_locator.o6sN0hZ"/>
         <argument key="App\Controller\ReservasController::mostrarReservas" type="service_closure" id=".service_locator.w.v1aZc"/>
@@ -6258,7 +6265,7 @@
         <argument key="App\Controller\ParticipacionController:AceptarInvitacion" type="service_closure" id=".service_locator.giM7w9x"/>
         <argument key="App\Controller\ParticipacionController:index" type="service_closure" id=".service_locator.yRlwRBf"/>
         <argument key="App\Controller\ParticipacionController:invitacion" type="service_closure" id=".service_locator.giM7w9x"/>
-        <argument key="App\Controller\ParticipacionController:verEventos" type="service_closure" id=".service_locator.giM7w9x"/>
+        <argument key="App\Controller\ParticipacionController:verEventos" type="service_closure" id=".service_locator.219vIKa"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.xVV8u.q"/>
         <argument key="App\Controller\ReservasController:createReservas" type="service_closure" id=".service_locator.o6sN0hZ"/>
         <argument key="App\Controller\ReservasController:mostrarReservas" type="service_closure" id=".service_locator.w.v1aZc"/>
@@ -6791,12 +6798,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.1zrgW89"/>
+      <argument type="service" id=".service_locator.VudxRBy"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.1zrgW89"/>
+      <argument type="service" id=".service_locator.VudxRBy"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -7605,7 +7612,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcherInterface" alias="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcher"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.1zrgW89"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.VudxRBy"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -7615,8 +7622,9 @@
     <service id=".service_locator.lng3o3t" alias=".service_locator.yR6jqeD"/>
     <service id=".service_locator.Lazlz4J" alias=".service_locator.jG5xrFj"/>
     <service id=".service_locator.JNgRV_6" alias=".service_locator.Ix_Nz1Z"/>
+    <service id=".service_locator.heSlH3y" alias=".service_locator.219vIKa"/>
     <service id=".service_locator.i55Vd0x" alias=".service_locator.xVV8u.q"/>
-    <service id=".service_locator.QYiS0.i" alias=".service_locator.1zrgW89"/>
+    <service id=".service_locator._ZWFWtb" alias=".service_locator.VudxRBy"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.y5v9YIT" alias=".service_locator.SQeV11_"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7668,6 +7676,7 @@
     <service id=".service_locator.bSq3YC2" alias=".service_locator.Ix_Nz1Z"/>
     <service id=".service_locator.rn.fhpq" alias=".service_locator.yRlwRBf"/>
     <service id=".service_locator..av73uR" alias=".service_locator.giM7w9x"/>
+    <service id=".service_locator.EV0chjf" alias=".service_locator.219vIKa"/>
     <service id=".service_locator.JbBQMAg" alias=".service_locator.xVV8u.q"/>
     <service id=".service_locator.kgGKNoZ" alias=".service_locator.w.v1aZc"/>
     <service id=".service_locator.M.Zzl8u" alias=".service_locator.gpD2sMy"/>

@@ -31,11 +31,30 @@ class ParticipacionController extends AbstractController
        return $siu->anadirUsuarioEvento($idE,$idU);
     }
     #[Route('/misEventos/{idU}',name: 'mis_eventos', methods: ['GET'])]//FALTA EL POST
-        public function verEventos(ServicioInvitacionUsuarios $siu,$idU): Response
+        public function verEventos(ServicioInvitacionUsuarios $siu,$idU,EventosRepository $eventosR): Response
     {
-       return $this->render('participacion/participaciones.html.twig', [
-            'eventos' => $siu->mostrarEventosPersonales($idU),
+
+        $misEventos =$siu->mostrarEventosPersonales($idU);
+        foreach ($misEventos as $datos) {
+            $idEvento = $datos->getEvento();
+            $traerEvento = $eventosR->find($idEvento);
+            $nombreEvento = $traerEvento->getNombre();
+            $data[] = [
+                'evento'=> $nombreEvento
+            ];
+    }
+
+        
+
+
+
+
+        return $this->render('participacion/participaciones.html.twig', [
+      'eventos' => 
+      //$siu->mostrarEventosPersonales($idU),
+      $data
        ]);
+   
        
     }
 }
