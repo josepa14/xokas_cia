@@ -63,10 +63,10 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t";
         // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 27
+        // line 26
         echo "
 \t\t";
-        // line 28
+        // line 27
         $this->displayBlock('javascripts', $context, $blocks);
         // line 39
         echo "\t</head>
@@ -180,7 +180,24 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
         echo "
 \t\t";
         // line 112
-        echo "
+        echo "\t\t
+
+\t\t<div class=\"container rounded-top\">
+\t\t<nav class=\"bg-black p-1 rounded-top\">
+\t\t<audio id=\"medio\" controls style=\"display:none\">
+            <source src=\"/assets/img/juegos/rick.mp3\" type=\"audio/mp3\"/>
+            <p>audio no compatible</p>
+        </audio>
+\t\t\t<input type=\"button\" id=\"reiniciar\" value=\"reiniciar\">
+\t\t\t<input type=\"button\" id=\"retrasar\" value=\"&laquo;\">
+\t\t\t<input type=\"button\" id=\"play\" value=\"&#9658;\">
+\t\t\t<input type=\"button\" id=\"adelantar\" value=\"&raquo;\">
+\t\t\t<input type=\"button\" id=\"silenciar\" value=\"silenciar\">
+\t\t\t<label class=\"text-white\">Volumen</label>
+\t\t\t<input type=\"button\" id=\"menosVolumen\" value=\"-\">
+\t\t\t<input type=\"button\" id=\"masVolumen\" value=\"+\">
+\t\t</nav>
+\t\t</div>
 \t\t<footer
 \t\t\tclass=\"bg-black text-center text-lg-start text-white\">
 \t\t\t<!-- Grid container -->
@@ -206,12 +223,11 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
 
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t
+
 \t\t\t\t\t<!--Grid column-->
 
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
-\t\t\t\t\t\t<h5 class=\"text-uppercase text-white mb-4\">Contacto</h5>
+\t\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\"> <h5 class=\"text-uppercase text-white mb-4\">Contacto</h5>
 
 \t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t<li>
@@ -229,13 +245,13 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
+\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
 \t\t\t\t\t\t<h5 class=\"text-uppercase text-white mb-4\">Xokas Cia</h5>
 
 \t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t<li class=\"mb-2\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 166
+        // line 182
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\" class=\"text-white\">
 \t\t\t\t\t\t\t\t\t<i class=\"fas fa-paw pe-3\"></i>Inicio</a>
@@ -246,7 +262,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"mb-2\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 174
+        // line 190
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_index");
         echo "\" class=\"text-white\">
 \t\t\t\t\t\t\t\t\t<i class=\"fas fa-paw pe-3\"></i>Juegos</a>
@@ -297,7 +313,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery.toast.css\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/theme.css\"/>
 \t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
-
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/>
 \t\t";
         
@@ -305,14 +320,14 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     }
 
-    // line 28
+    // line 27
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 29
+        // line 28
         echo "\t\t\t<script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/assets/js/jquery-ui.js\"></script>
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>
@@ -320,6 +335,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t<script src=\"/assets/js/reservas.js\"></script>
 \t\t\t<script src=\"/assets/js/mesa.js\"></script>
 \t\t\t<script src=\"/assets/js/zonaReservas.js\"></script>
+\t\t\t<script src=\"/assets/js/audio.js\"></script>
 
 
 \t\t";
@@ -352,7 +368,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     public function getDebugInfo()
     {
-        return array (  332 => 109,  316 => 29,  309 => 28,  294 => 18,  287 => 17,  273 => 6,  250 => 174,  239 => 166,  183 => 112,  180 => 110,  177 => 109,  171 => 104,  166 => 102,  161 => 100,  157 => 98,  150 => 94,  136 => 83,  124 => 74,  118 => 71,  108 => 63,  106 => 62,  97 => 56,  91 => 53,  81 => 46,  72 => 39,  70 => 28,  67 => 27,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  348 => 109,  331 => 28,  324 => 27,  310 => 18,  303 => 17,  289 => 6,  266 => 190,  255 => 182,  183 => 112,  180 => 110,  177 => 109,  171 => 104,  166 => 102,  161 => 100,  157 => 98,  150 => 94,  136 => 83,  124 => 74,  118 => 71,  108 => 63,  106 => 62,  97 => 56,  91 => 53,  81 => 46,  72 => 39,  70 => 27,  67 => 26,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -380,7 +396,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/jquery.toast.css\"/>
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/theme.css\"/>
 \t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
-
 \t\t\t<link rel=\"stylesheet\" href=\"/assets/css/propio.css\"/>
 \t\t{% endblock %}
 
@@ -392,6 +407,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t<script src=\"/assets/js/reservas.js\"></script>
 \t\t\t<script src=\"/assets/js/mesa.js\"></script>
 \t\t\t<script src=\"/assets/js/zonaReservas.js\"></script>
+\t\t\t<script src=\"/assets/js/audio.js\"></script>
 
 
 \t\t{% endblock %}
@@ -468,7 +484,24 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t{% block body %}{% endblock %}
 
 \t\t{# FOOTER ------------------------------------------------------------------------------------------------------------------------------------------ #}
+\t\t
 
+\t\t<div class=\"container rounded-top\">
+\t\t<nav class=\"bg-black p-1 rounded-top\">
+\t\t<audio id=\"medio\" controls style=\"display:none\">
+            <source src=\"/assets/img/juegos/rick.mp3\" type=\"audio/mp3\"/>
+            <p>audio no compatible</p>
+        </audio>
+\t\t\t<input type=\"button\" id=\"reiniciar\" value=\"reiniciar\">
+\t\t\t<input type=\"button\" id=\"retrasar\" value=\"&laquo;\">
+\t\t\t<input type=\"button\" id=\"play\" value=\"&#9658;\">
+\t\t\t<input type=\"button\" id=\"adelantar\" value=\"&raquo;\">
+\t\t\t<input type=\"button\" id=\"silenciar\" value=\"silenciar\">
+\t\t\t<label class=\"text-white\">Volumen</label>
+\t\t\t<input type=\"button\" id=\"menosVolumen\" value=\"-\">
+\t\t\t<input type=\"button\" id=\"masVolumen\" value=\"+\">
+\t\t</nav>
+\t\t</div>
 \t\t<footer
 \t\t\tclass=\"bg-black text-center text-lg-start text-white\">
 \t\t\t<!-- Grid container -->
@@ -494,12 +527,11 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
 
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t
+
 \t\t\t\t\t<!--Grid column-->
 
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
-\t\t\t\t\t\t<h5 class=\"text-uppercase text-white mb-4\">Contacto</h5>
+\t\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\"> <h5 class=\"text-uppercase text-white mb-4\">Contacto</h5>
 
 \t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t<li>
@@ -517,7 +549,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t\t<!--Grid column-->
-\t\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
+\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb-4 mb-md-0\">
 \t\t\t\t\t\t<h5 class=\"text-uppercase text-white mb-4\">Xokas Cia</h5>
 
 \t\t\t\t\t\t<ul class=\"list-unstyled\">
@@ -545,6 +577,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t</body>
 
 </html>
-", "base.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\base.html.twig");
     }
 }

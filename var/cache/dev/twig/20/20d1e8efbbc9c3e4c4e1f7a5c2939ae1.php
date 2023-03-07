@@ -71,7 +71,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
 
         // line 6
         echo "<h1 class=\"container mt-3\">Directorio de Juegos</h1>
-<div class=\"container mt-3 p-2 rounder g--fondo-semi shadow\">
+<div class=\"container mt-3 p-2 rounder g--fondo-semi shadow mb-3\">
 
     <table class=\"table\">
         <thead>
@@ -193,7 +193,7 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
 
 {% block body %}
 <h1 class=\"container mt-3\">Directorio de Juegos</h1>
-<div class=\"container mt-3 p-2 rounder g--fondo-semi shadow\">
+<div class=\"container mt-3 p-2 rounder g--fondo-semi shadow mb-3\">
 
     <table class=\"table\">
         <thead>
@@ -237,6 +237,6 @@ class __TwigTemplate_f47ba91acd1cfcb61aca330918f83740 extends Template
 
     
 {% endblock %}
-", "juegos/index.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\juegos\\index.html.twig");
+", "juegos/index.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\juegos\\index.html.twig");
     }
 }

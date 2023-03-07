@@ -11,73 +11,81 @@
 						<p class="mb-6 lead text-secondary">Diviertete con tus amigos jugando juegos de mesa, all<br class="d-none d-xl-block"/>y participando en nuestros eventos, tan solo<br class="d-none d-xl-block"/>registrate y empieza a disfrutar</p>
 						<div class="text-center text-md-start">
 							<a class="btn btn-warning me-3 btn-lg p-3 text-white" href="{{path('app_register')}}" role="button">REGISTRO</a>
+							<a role="button" class="btn">Ver el video</a>
 						</div>
+
 					</div>
 					<div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid" src="assets/img/juegos/juegosindex.jpg" alt=""/></div>
 				</div>
+				
 			</div>
 		</section>
 	{% endif %}
 	<section class="pt-5">
 
-        <div class="container">
-          <div class="row g--transicion2">
-            <div class="col-lg-6"><img class="img-fluid" src="assets/img/manager/manager.png" alt=""></div>
-            <div class="col-lg-6">
-              <p class="fs-7 fw-bold mt-5">Participa en nuestros eventos!</p>
-              <p class="mb-4 fw-medium text-secondary">
-                En Xokas cia organizamos competiciones y quedadas para dar a conocer el mundo de los juegos de Mesa, no lo dudes y participa! <br> Ademas tienes ventajas:
-              </p>
-              <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
-                <p class="fw-medium mb-0 text-secondary">Probabilidad de conseguir premios</p>
-              </div>
-              <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
-                <p class="fw-medium mb-0 text-secondary">Aumentar tu puntuacion final</p>
-              </div>
-              <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
-                <p class="fw-medium mb-0 text-secondary">Y la mas importante, estar al tanto de las ultimas novedades</p>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-
-    </section>
-	<section>
-	<div class="container g--transicion2">
-		<h1 class="fs-9 fw-bold mb-4 text-center">
-			Algunos juegos
-			<br class="d-none d-xl-block">de nuestra coleccion</h1>
-		<div class="row ">
-
-			{% for juego in juegos %}
-
-				<div class=" col-lg-3 col-sm-6 mb-2 mt-3 text-center flip-card rounded">
-					<div class="flip-card-inner shadow-lg rounded">
-						<div class="flip-card-front pt-3 g--fondo-semi rounded">
-							<img class="mb-3 ms-n3" src="/assets/img/juegos/{{juego.imagen}}" width="75" alt="Feature"/>
-							<h4 class="mb-3">{{ juego.nombre }}</h4>
-
-							<p class="mb-0 fw-medium text-secondary">Minimo de jugadores
-								{{juego.minPlayers}}, maximo
-								{{juego.maxPlayers}}
-							</p>
-						</div>
-						<div class="flip-card-back g--fondo-semi rounded">
-						<p class="mb-0 fw-medium text-secondary pt-6">{{juego.descripcion}}</p>
-						</div>
+		<div class="container">
+			<div class="row g--transicion2">
+				<div class="col-lg-6"><img class="img-fluid" src="assets/img/manager/manager.png" alt=""></div>
+				<div class="col-lg-6">
+					<p class="fs-7 fw-bold mt-5">Participa en nuestros eventos!</p>
+					<p class="mb-4 fw-medium text-secondary">
+						En Xokas cia organizamos competiciones y quedadas para dar a conocer el mundo de los juegos de Mesa, no lo dudes y participa!
+						<br>
+						Ademas tienes ventajas:
+					</p>
+					<div class="d-flex align-items-center mb-3">
+						<img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
+						<p class="fw-medium mb-0 text-secondary">Probabilidad de conseguir premios</p>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
+						<p class="fw-medium mb-0 text-secondary">Aumentar tu puntuacion final</p>
+					</div>
+					<div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="assets/img/manager/tick.png" width="35" alt="tick">
+						<p class="fw-medium mb-0 text-secondary">Y la mas importante, estar al tanto de las ultimas novedades</p>
 					</div>
 				</div>
-				
-				{# ESTE ES EL INDEX DEL MODAL #}
-
-				{# ESTE ES EL FIN DEL MODAL #}
-
-			{% endfor %}
-			<div class="text-center mt-2 mb-5">
-				<a class="btn btn-warning g--transicion3" href="{{path('app_juegos_index')}}" role="button">Todos nuestros Juegos</a>
 			</div>
 		</div>
+		<!-- end of .container-->
 
-	</div>
+	</section>
+	<section>
+		<div class="container g--transicion2">
+			<h1 class="fs-9 fw-bold mb-4 text-center">
+				Algunos juegos
+				<br class="d-none d-xl-block">de nuestra coleccion</h1>
+			<div class="row ">
+
+				{% for juego in juegos %}
+
+					<div class=" col-lg-3 col-sm-6 mb-2 mt-3 text-center flip-card rounded">
+						<div class="flip-card-inner shadow-lg rounded">
+							<div class="flip-card-front pt-3 g--fondo-semi rounded">
+								<img class="mb-3 ms-n3" src="/assets/img/juegos/{{juego.imagen}}" width="75" alt="Feature"/>
+								<h4 class="mb-3">{{ juego.nombre }}</h4>
+
+								<p class="mb-0 fw-medium text-secondary">Minimo de jugadores
+									{{juego.minPlayers}}, maximo
+									{{juego.maxPlayers}}
+								</p>
+							</div>
+							<div class="flip-card-back g--fondo-semi rounded">
+								<p class="mb-0 fw-medium text-secondary pt-6">{{juego.descripcion}}</p>
+							</div>
+						</div>
+					</div>
+
+					{# ESTE ES EL INDEX DEL MODAL #}
+
+					{# ESTE ES EL FIN DEL MODAL #}
+
+				{% endfor %}
+				<div class="text-center mt-2 mb-5">
+					<a class="btn btn-warning g--transicion3" href="{{path('app_juegos_index')}}" role="button">Todos nuestros Juegos</a>
+				</div>
+			</div>
+
+		</div>
 	</section>
 {% endblock %}

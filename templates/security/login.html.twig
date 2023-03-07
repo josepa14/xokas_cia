@@ -44,7 +44,7 @@
                   </div>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                 {% if error %}
-                  <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                  <div class="alert alert-danger">Email o passowrd incorrectos</div>
                 {% endif %}
                   <div class="pt-1 mb-4">
                     <button class="btn btn-warning btn-lg btn-block" type="submit">Login</button>

@@ -21,7 +21,6 @@
 			<link rel="stylesheet" href="/assets/css/jquery.toast.css"/>
 			<link rel="stylesheet" href="/assets/css/theme.css"/>
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 			<link rel="stylesheet" href="/assets/css/propio.css"/>
 		{% endblock %}
 
@@ -33,6 +32,7 @@
 			<script src="/assets/js/reservas.js"></script>
 			<script src="/assets/js/mesa.js"></script>
 			<script src="/assets/js/zonaReservas.js"></script>
+			<script src="/assets/js/audio.js"></script>
 
 
 		{% endblock %}
@@ -109,7 +109,24 @@
 		{% block body %}{% endblock %}
 
 		{# FOOTER ------------------------------------------------------------------------------------------------------------------------------------------ #}
+		
 
+		<div class="container rounded-top">
+		<nav class="bg-black p-1 rounded-top">
+		<audio id="medio" controls style="display:none">
+            <source src="/assets/img/juegos/rick.mp3" type="audio/mp3"/>
+            <p>audio no compatible</p>
+        </audio>
+			<input type="button" id="reiniciar" value="reiniciar">
+			<input type="button" id="retrasar" value="&laquo;">
+			<input type="button" id="play" value="&#9658;">
+			<input type="button" id="adelantar" value="&raquo;">
+			<input type="button" id="silenciar" value="silenciar">
+			<label class="text-white">Volumen</label>
+			<input type="button" id="menosVolumen" value="-">
+			<input type="button" id="masVolumen" value="+">
+		</nav>
+		</div>
 		<footer
 			class="bg-black text-center text-lg-start text-white">
 			<!-- Grid container -->
@@ -135,12 +152,11 @@
 
 
 					<!--Grid column-->
-				
+
 					<!--Grid column-->
 
 					<!--Grid column-->
-					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-						<h5 class="text-uppercase text-white mb-4">Contacto</h5>
+						<div class="col-lg-4 col-md-6 mb-4 mb-md-0"> <h5 class="text-uppercase text-white mb-4">Contacto</h5>
 
 						<ul class="list-unstyled">
 							<li>
@@ -158,7 +174,7 @@
 						</ul>
 					</div>
 					<!--Grid column-->
-						<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
 						<h5 class="text-uppercase text-white mb-4">Xokas Cia</h5>
 
 						<ul class="list-unstyled">

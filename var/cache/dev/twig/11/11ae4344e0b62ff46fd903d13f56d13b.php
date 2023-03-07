@@ -132,9 +132,7 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
             // line 46
             if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 46, $this->source); })())) {
                 // line 47
-                echo "                  <div class=\"alert alert-danger\">";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 47, $this->source); })()), "messageKey", [], "any", false, false, false, 47), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 47, $this->source); })()), "messageData", [], "any", false, false, false, 47), "security"), "html", null, true);
-                echo "</div>
+                echo "                  <div class=\"alert alert-danger\">Email o passowrd incorrectos</div>
                 ";
             }
             // line 49
@@ -186,7 +184,7 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  170 => 81,  165 => 78,  146 => 52,  141 => 49,  135 => 47,  133 => 46,  129 => 45,  118 => 37,  93 => 14,  90 => 13,  82 => 10,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  168 => 81,  163 => 78,  144 => 52,  139 => 49,  135 => 47,  133 => 46,  129 => 45,  118 => 37,  93 => 14,  90 => 13,  82 => 10,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -237,7 +235,7 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
                   </div>
                 <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
                 {% if error %}
-                  <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                  <div class=\"alert alert-danger\">Email o passowrd incorrectos</div>
                 {% endif %}
                   <div class=\"pt-1 mb-4\">
                     <button class=\"btn btn-warning btn-lg btn-block\" type=\"submit\">Login</button>
@@ -273,6 +271,6 @@ class __TwigTemplate_44b7fcd53a35c9dd4efd62a86c7607f0 extends Template
 {% endif %}
 
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\security\\login.html.twig");
     }
 }
