@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mis Participaciones
+{% endblock %}
+
+{% block body %}
+	<h1 class="container mt-3">Directorio de Juegos</h1>
+	<div class="container mt-3 p-2 rounder g--fondo-semi shadow mb-3">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Eventos en los que participo</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				{% for party in eventos %}
+					<tr>
+						<td>{{ party.evento}}</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="7">Aun no participo en eventos</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

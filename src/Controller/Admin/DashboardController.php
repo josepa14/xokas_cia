@@ -2,8 +2,10 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Eventos;
 use App\Entity\Juegos;
 use App\Entity\Mesas;
+use App\Entity\Participacion;
 use App\Entity\Reservas;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -54,6 +56,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Crud Usuarios', 'fas fa-list', User::class);
         yield MenuItem::linkToCrud('Crud Reservas', 'fas fa-list', Reservas::class);
         yield MenuItem::linkToCrud('Crud Mesas', 'fas fa-list', Mesas::class);
+        yield MenuItem::linkToCrud('Crud Eventos', 'fas fa-list', Eventos::class);
+        yield MenuItem::linkToCrud('Crud Participacion', 'fas fa-list', Participacion::class);
     }
 
 }

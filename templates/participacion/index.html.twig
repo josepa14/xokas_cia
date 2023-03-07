@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EVENTOS{% endblock %}
+
+{% block body %}
+<h1 class="container mt-3">Directorio de Eventos</h1>
+<div class="container mt-3 p-2 rounder g--fondo-semi shadow mb-3">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                
+                <th>Juego</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evento in eventos %}
+            <tr>
+                <td>{{ evento.id }}</td>
+                <td>{{ evento.nombre }}</td>
+
+                <td>{{ evento.juego }}</td>
+                <td>{{ evento.fecha }}</td>
+                <td>
+                    
+                    {% if app.user %}
+                    {% if "ROLE_ADMIN" in app.user.roles %}   
+                    <a class="btn btn-info text-white" href="{{ path('app_invitacion', {'id': evento.id}) }}">Invitar</a>
+                    {% endif %}
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

@@ -18,6 +18,7 @@ return [
         '/mesas' => [[['_route' => 'app_mesas', '_controller' => 'App\\Controller\\MesasController::index'], null, null, null, false, false, null]],
         '/nuevamesa' => [[['_route' => 'app_mesas_createmesas', '_controller' => 'App\\Controller\\MesasController::createMesas'], null, ['POST' => 0], null, false, false, null]],
         '/editarmemsa' => [[['_route' => 'app_mesas_modificarmesa', '_controller' => 'App\\Controller\\MesasController::ModificarMesa'], null, ['POST' => 0], null, false, false, null]],
+        '/eventos' => [[['_route' => 'app_eventos', '_controller' => 'App\\Controller\\ParticipacionController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/reservas' => [[['_route' => 'app_reservas', '_controller' => 'App\\Controller\\ReservasController::index'], null, null, null, false, false, null]],
         '/nuevaReserva' => [[['_route' => 'app_reservas_createreservas', '_controller' => 'App\\Controller\\ReservasController::createReservas'], null, ['POST' => 0], null, false, false, null]],
@@ -33,11 +34,16 @@ return [
                     .')'
                     .'|mostrarJuegos/([^/]++)/([^/]++)(*:122)'
                 .')'
-                .'|/mostrar(?'
-                    .'|mesas/([^/]++)(*:156)'
-                    .'|reservas/([^/]++)/([^/]++)(*:190)'
+                .'|/m(?'
+                    .'|ostrar(?'
+                        .'|mesas/([^/]++)(*:159)'
+                        .'|reservas/([^/]++)/([^/]++)(*:193)'
+                    .')'
+                    .'|isEventos/([^/]++)(*:220)'
                 .')'
-                .'|/reservasPersonales/([^/]++)(*:227)'
+                .'|/invitarEvento/([^/]++)(*:252)'
+                .'|/aceptarInvitacion/([^/]++)/([^/]++)(*:296)'
+                .'|/reservasPersonales/([^/]++)(*:332)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -46,9 +52,12 @@ return [
         76 => [[['_route' => 'app_juegos_edit', '_controller' => 'App\\Controller\\JuegosController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         83 => [[['_route' => 'app_juegos_delete', '_controller' => 'App\\Controller\\JuegosController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         122 => [[['_route' => 'app_juegos_mostrarreservas', '_controller' => 'App\\Controller\\JuegosController::mostrarReservas'], ['altura', 'anchura'], ['GET' => 0], null, false, true, null]],
-        156 => [[['_route' => 'app_mesas_mostarmesas', '_controller' => 'App\\Controller\\MesasController::mostarMesas'], ['fecha'], ['GET' => 0], null, false, true, null]],
-        190 => [[['_route' => 'app_reservas_mostrarreservas', '_controller' => 'App\\Controller\\ReservasController::mostrarReservas'], ['fecha', 'hora'], ['GET' => 0], null, false, true, null]],
-        227 => [
+        159 => [[['_route' => 'app_mesas_mostarmesas', '_controller' => 'App\\Controller\\MesasController::mostarMesas'], ['fecha'], ['GET' => 0], null, false, true, null]],
+        193 => [[['_route' => 'app_reservas_mostrarreservas', '_controller' => 'App\\Controller\\ReservasController::mostrarReservas'], ['fecha', 'hora'], ['GET' => 0], null, false, true, null]],
+        220 => [[['_route' => 'mis_eventos', '_controller' => 'App\\Controller\\ParticipacionController::verEventos'], ['idU'], ['GET' => 0], null, false, true, null]],
+        252 => [[['_route' => 'app_invitacion', '_controller' => 'App\\Controller\\ParticipacionController::invitacion'], ['id'], ['GET' => 0], null, false, true, null]],
+        296 => [[['_route' => 'app_participacion_aceptarinvitacion', '_controller' => 'App\\Controller\\ParticipacionController::AceptarInvitacion'], ['idE', 'idU'], ['GET' => 0], null, false, true, null]],
+        332 => [
             [['_route' => 'app_misreservas', '_controller' => 'App\\Controller\\ReservasController::mostrarReservasP'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

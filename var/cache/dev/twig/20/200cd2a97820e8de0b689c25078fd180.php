@@ -98,13 +98,17 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
         echo "\">Juegos</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"#superhero\">Eventos</a>
+\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"";
+        // line 59
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_eventos");
+        echo "\">Eventos</a>
 \t\t\t\t\t\t</li>
+\t\t\t\t\t\t
 
 \t\t\t\t\t\t";
-        // line 62
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 62, $this->source); })()), "user", [], "any", false, false, false, 62)) {
-            // line 63
+        // line 63
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", [], "any", false, false, false, 63)) {
+            // line 64
             echo "\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t\t\t\t\t<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
@@ -114,15 +118,21 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 71
+            // line 72
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservas");
             echo "\">Reservar</a>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 74
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_misreservas", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "user", [], "any", false, false, false, 74), "id", [], "any", false, false, false, 74)]), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_misreservas", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "user", [], "any", false, false, false, 75), "id", [], "any", false, false, false, 75)]), "html", null, true);
             echo "\">Mis Reservas</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+            // line 78
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mis_eventos", ["idU" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "user", [], "any", false, false, false, 78), "id", [], "any", false, false, false, 78)]), "html", null, true);
+            echo "\">Mis Eventos</a>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Mi perfil</a>
@@ -132,7 +142,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 83
+            // line 87
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<b>Logout</b>
@@ -146,40 +156,40 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
 \t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t";
-            // line 94
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 94, $this->source); })()), "user", [], "any", false, false, false, 94), "userIdentifier", [], "any", false, false, false, 94), "html", null, true);
+            // line 98
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 98, $this->source); })()), "user", [], "any", false, false, false, 98), "userIdentifier", [], "any", false, false, false, 98), "html", null, true);
             echo ",
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t";
         } else {
-            // line 98
+            // line 102
             echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t<div class=\"d-flex ms-lg-4\">
 \t\t\t\t\t\t\t<a class=\"btn btn-lg btn-outline-light\" href=\"";
-            // line 100
+            // line 104
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Login<i class=\"fa-thin fa-arrow-right-to-bracket\"></i>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<a class=\"btn btn-lg btn-warning ms-3\" href=\"";
-            // line 102
+            // line 106
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Registro</a>
 \t\t\t\t\t\t";
         }
-        // line 104
+        // line 108
         echo "\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 109
+        // line 113
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 110
+        // line 114
         echo "
 \t\t";
-        // line 112
+        // line 116
         echo "\t\t
 
 \t\t<div class=\"container rounded-top\">
@@ -251,7 +261,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t<li class=\"mb-2\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 182
+        // line 186
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\" class=\"text-white\">
 \t\t\t\t\t\t\t\t\t<i class=\"fas fa-paw pe-3\"></i>Inicio</a>
@@ -262,7 +272,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"mb-2\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 190
+        // line 194
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_juegos_index");
         echo "\" class=\"text-white\">
 \t\t\t\t\t\t\t\t\t<i class=\"fas fa-paw pe-3\"></i>Juegos</a>
@@ -344,7 +354,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     }
 
-    // line 109
+    // line 113
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,7 +378,7 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 
     public function getDebugInfo()
     {
-        return array (  348 => 109,  331 => 28,  324 => 27,  310 => 18,  303 => 17,  289 => 6,  266 => 190,  255 => 182,  183 => 112,  180 => 110,  177 => 109,  171 => 104,  166 => 102,  161 => 100,  157 => 98,  150 => 94,  136 => 83,  124 => 74,  118 => 71,  108 => 63,  106 => 62,  97 => 56,  91 => 53,  81 => 46,  72 => 39,  70 => 27,  67 => 26,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  358 => 113,  341 => 28,  334 => 27,  320 => 18,  313 => 17,  299 => 6,  276 => 194,  265 => 186,  193 => 116,  190 => 114,  187 => 113,  181 => 108,  176 => 106,  171 => 104,  167 => 102,  160 => 98,  146 => 87,  134 => 78,  128 => 75,  122 => 72,  112 => 64,  110 => 63,  103 => 59,  97 => 56,  91 => 53,  81 => 46,  72 => 39,  70 => 27,  67 => 26,  65 => 17,  58 => 12,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -431,8 +441,9 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"{{path('app_juegos_index')}}\">Juegos</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"#superhero\">Eventos</a>
+\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"{{path('app_eventos')}}\">Eventos</a>
 \t\t\t\t\t\t</li>
+\t\t\t\t\t\t
 
 \t\t\t\t\t\t{% if app.user %}
 \t\t\t\t\t\t\t<li class=\"nav-item\">
@@ -447,6 +458,9 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('app_misreservas', {'id':app.user.id}) }}\">Mis Reservas</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('mis_eventos', {'idU':app.user.id}) }}\">Mis Eventos</a>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Mi perfil</a>
@@ -577,6 +591,6 @@ class __TwigTemplate_f72a80db8f2b689ddaaf1503c949f75d extends Template
 \t</body>
 
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\training\\15.Symfony\\xokas_cia\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\JoSePa\\Desktop\\2º DAW\\xokas_cia\\templates\\base.html.twig");
     }
 }

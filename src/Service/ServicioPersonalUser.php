@@ -22,7 +22,7 @@ class ServicioPersonalUser
         $this->p = $p;
         $this->repo = $repo;
     }
-    public function modificar($email,): void //
+    public function modificar($email): void //
     {   
        
         $usuario = $this->repo->findOneBySomeField($email);                  

@@ -56,8 +56,9 @@
 							<a class="nav-link" aria-current="page" href="{{path('app_juegos_index')}}">Juegos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="#superhero">Eventos</a>
+							<a class="nav-link" aria-current="page" href="{{path('app_eventos')}}">Eventos</a>
 						</li>
+						
 
 						{% if app.user %}
 							<li class="nav-item">
@@ -72,6 +73,9 @@
 										</li>
 										<li>
 											<a class="dropdown-item" href="{{ path('app_misreservas', {'id':app.user.id}) }}">Mis Reservas</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="{{ path('mis_eventos', {'idU':app.user.id}) }}">Mis Eventos</a>
 										</li>
 										<li>
 											<a class="dropdown-item" href="#">Mi perfil</a>
